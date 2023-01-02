@@ -28,7 +28,7 @@ export const Title = styled(Text)`
   color: ${COLORS.secondColor};
 `;
 
-export const Subtitle = styled(Text)`
+export const SectionSubtitle = styled(Text)`
   display: block;
   color: ${COLORS.secondColor};
   font-size: ${TYPOGRAPHY.small};

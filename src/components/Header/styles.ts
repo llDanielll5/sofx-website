@@ -10,6 +10,13 @@ export const StyledHeader = styled.header`
   background-color: transparent;
   z-index: ${ZINDEXES.zFixed};
   transition: 0.4s;
+  &.scroll-header {
+    background-color: ${COLORS.bodyColor};
+    box-shadow: 0 1px 4px hsla(228, 4%, 15%, 0.1);
+    #NavLogo {
+      color: ${COLORS.firstColor};
+    }
+  }
 `;
 
 export const StyledNav = styled(Container)`
@@ -20,7 +27,7 @@ export const StyledNav = styled(Container)`
 `;
 
 export const NavLogo = styled.a`
-  /* color: white; */
+  color: white;
   display: inline-flex;
   align-items: center;
   column-gap: 0.25rem;
@@ -72,4 +79,6 @@ export const NavLink = styled.a`
   }
 `;
 
-export const NavButton = styled.a``;
+export const NavButton = styled.a`
+  display: none;
+`;

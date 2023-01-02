@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { GiLaptop } from "react-icons/gi";
+import { useGetScrollPosition } from "../../hooks/useGetScrollPosition";
 import { NavItems } from "./data";
 import {
   NavButton,
@@ -13,10 +14,22 @@ import {
 } from "./styles";
 
 const Header = () => {
+  const headerRef = useRef<HTMLDivElement>(null);
+  const currentScroll = useGetScrollPosition();
+  const scrollHeader = useCallback(() => {
+    const header = headerRef?.current;
+    if (currentScroll >= 50) header?.classList.add("scroll-header");
+    else header?.classList.remove("scroll-header");
+  }, [currentScroll]);
+
+  useEffect(() => {
+    scrollHeader();
+  }, [currentScroll]);
+
   return (
-    <StyledHeader>
+    <StyledHeader ref={headerRef}>
       <StyledNav>
-        <NavLogo href="#">
+        <NavLogo href="#" id="NavLogo">
           DGS Softwares <GiLaptop />
         </NavLogo>
 
