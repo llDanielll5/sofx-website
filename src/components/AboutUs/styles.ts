@@ -13,6 +13,9 @@ import {
 
 export const StyledAbout = styled.section`
   padding: 4.5rem 0 2rem;
+  @media screen and (max-width: 1023px) {
+    padding: 4.5rem 1rem 2rem 0;
+  }
 `;
 
 export const AboutContainer = styled(Container)`

@@ -12,9 +12,12 @@ import { MdLocationOn } from "react-icons/md";
 import Button from "../Button";
 
 export const HomeSection = styled.section`
-  padding: 4.5rem 0 2rem;
   background: linear-gradient(170deg, hsl(0, 0%, 22%) 0%, hsl(0, 0%, 6%) 30%);
   padding-bottom: 0;
+  padding: 4.5rem 0 2rem;
+  @media screen and (max-width: 1023px) {
+    padding: 4.5rem 1rem 2rem 0;
+  }
 `;
 
 export const HomeContainer = styled(Container)`
