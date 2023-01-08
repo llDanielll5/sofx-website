@@ -21,10 +21,9 @@ interface ContactCardProps {
 }
 
 const Contact = () => {
-  const msg = `
-  Olá!! 
-  Gostaria de receber um orçamento para a criação de uma aplicação para minha empresa!
-  Como funciona?
+  const msg = `Olá!! 
+Gostaria de receber um orçamento para a criação de uma aplicação para minha empresa!
+Como funciona?
   `;
   const ContactCard = (props: ContactCardProps) => {
     return (
