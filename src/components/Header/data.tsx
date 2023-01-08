@@ -14,11 +14,6 @@ export const NavItems = [
     icon: <BsPersonBadge style={{ fontSize: "1rem" }} />,
     path: "#aboutus",
   },
-  // {
-  //   title: "Orçamentos",
-  //   icon: <GrMoney style={{ fontSize: "1rem" }} />,
-  //   path: "#budgets",
-  // },
   {
     title: "Contatos",
     icon: <AiOutlinePhone style={{ fontSize: "1rem" }} />,

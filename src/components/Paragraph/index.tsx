@@ -1,3 +1,4 @@
+//@ts-nocheck
 import React from "react";
 import { TextProps } from "../Text";
 import { StyledParagraph } from "../Text/styles";

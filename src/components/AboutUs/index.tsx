@@ -1,6 +1,8 @@
+//@ts-nocheck
 import Image from "next/legacy/image";
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Paragraph from "../Paragraph";
+import CodeImage from "../../../public/images/code.png";
 import { SectionSubtitle } from "../Reusables/styles";
 import { aboutData } from "./data";
 import {
@@ -24,22 +26,59 @@ import {
 
 export interface AboutItems {
   icon: any;
+  index: number;
   title: string;
   description: string;
 }
 
 const AboutUs = () => {
+  const accordionItemRef = useRef<HTMLDivElement>(null);
+  const aboutContentRef = useRef<HTMLDivElement>(null);
+  const accordionHeaderRef = useRef<HTMLDivElement>(null);
+  const [aboutItemsHeight, setAboutItemsHeight] = useState<any[]>([0, 0, 0]);
+
+  const toggleAboutItem = (index: number) => {
+    if (aboutItemsHeight[index] === 0) {
+      setAboutItemsHeight((previous) => {
+        const clone = [...previous];
+        for (let i = 0; i < clone.length; i++) {
+          clone[i] = 0;
+        }
+        clone[index] = "auto";
+
+        return clone;
+      });
+    } else {
+      setAboutItemsHeight((previous) => {
+        const clone = [...previous];
+        clone[index] = 0;
+        return clone;
+      });
+    }
+  };
+
   const AboutItems = (props: AboutItems) => (
-    <AboutAccordionItem>
-      <AboutAccordionHeader>
+    <AboutAccordionItem
+      id="items"
+      dynamicHeight={aboutItemsHeight[props.index]}
+    >
+      <AboutAccordionHeader
+        ref={accordionHeaderRef}
+        id="header"
+        onClick={() => toggleAboutItem(props.index)}
+      >
         {props.icon}
         <AboutAccordionTitle>{props.title}</AboutAccordionTitle>
         <AboutAccordionArrow>
-          <ArrowDownIcon />
+          <ArrowDownIcon dynamicHeight={aboutItemsHeight[props.index]} />
         </AboutAccordionArrow>
       </AboutAccordionHeader>
 
-      <AboutAccordionContent>
+      <AboutAccordionContent
+        ref={aboutContentRef}
+        id="content"
+        dynamicHeight={aboutItemsHeight[props.index]}
+      >
         <AboutAccordionDescription>
           {props.description}
         </AboutAccordionDescription>
@@ -53,31 +92,32 @@ const AboutUs = () => {
           <AboutOrbe />
 
           <AboutImg>
-            <Image alt={""} />
+            <Image alt={"Coding Image"} src={CodeImage} />
           </AboutImg>
-
-          <AboutContent>
-            <AboutData>
-              <SectionSubtitle></SectionSubtitle>
-              <H2SectionTitle>
-                <span></span>
-              </H2SectionTitle>
-
-              <Paragraph id="valueDescription"></Paragraph>
-            </AboutData>
-
-            <AboutAccordion>
-              {aboutData?.map((item, i) => (
-                <AboutItems
-                  key={i}
-                  description={item?.description}
-                  title={item?.title}
-                  icon={item?.icon}
-                />
-              ))}
-            </AboutAccordion>
-          </AboutContent>
         </AboutImages>
+
+        <AboutContent>
+          <AboutData>
+            <SectionSubtitle></SectionSubtitle>
+            <H2SectionTitle>
+              <span></span>
+            </H2SectionTitle>
+
+            <Paragraph id="valueDescription"></Paragraph>
+          </AboutData>
+
+          <AboutAccordion ref={accordionItemRef}>
+            {aboutData?.map((item, i) => (
+              <AboutItems
+                key={i}
+                index={i}
+                description={item?.description}
+                title={item?.title}
+                icon={item?.icon}
+              />
+            ))}
+          </AboutAccordion>
+        </AboutContent>
       </AboutContainer>
     </StyledAbout>
   );

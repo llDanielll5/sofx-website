@@ -1,6 +1,6 @@
+//@ts-nocheck
 import React from "react";
 import {
-  AboutSection,
   BannerImage,
   HomeContainer,
   HomeData,
@@ -19,8 +19,6 @@ import {
 import BannerImg from "../../../public/images/banner.jpg";
 
 const Home: React.FC = () => {
-  const test = ["", "", ""];
-
   const ComponentValue = () => (
     <div>
       <h1 id="valueNumber">
@@ -44,27 +42,27 @@ const Home: React.FC = () => {
             que desejar! Suas ideias tornam-se reais na DGS
           </HomeDescription>
 
-          <HomeSearch action="">
+          {/* <HomeSearch action="">
             <HomeSearchIcon />
             <HomeSearchInput
               type={"search"}
               placeholder={"Buscar por localização"}
             />
             <SearchButton>Buscar</SearchButton>
-          </HomeSearch>
+          </HomeSearch> */}
 
-          <HomeValue>
-            {test?.map((item, index) => (
-              <ComponentValue key={index} />
-            ))}
-          </HomeValue>
+          <HomeValue>{/* <ComponentValue /> */}</HomeValue>
         </HomeData>
 
         <HomeImages>
           <HomeOrbe></HomeOrbe>
 
           <HomeImg>
-            <BannerImage src={BannerImg} alt="" objectFit="contain" />
+            <BannerImage
+              src={BannerImg}
+              alt="Banner Image"
+              objectFit="contain"
+            />
           </HomeImg>
         </HomeImages>
       </HomeContainer>
