@@ -19,7 +19,7 @@ const Footer = () => {
   return (
     <FooterSection>
       <div className={styles.footer__container}>
-        <div>
+        <div className={styles.footerTextContainer}>
           <FooterLogo href="#">
             DGS Softwares <GiLaptop />
           </FooterLogo>

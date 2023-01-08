@@ -1,22 +1,19 @@
-import { SlHome } from "react-icons/sl";
-import { BsPersonBadge } from "react-icons/bs";
-import { AiOutlinePhone } from "react-icons/ai";
-import { GrMoney } from "react-icons/gr";
+import { AboutIcon, ContactIcon, HomeIcon } from "./styles";
 
 export const NavItems = [
   {
     title: "Home",
-    icon: <SlHome style={{ fontSize: "1rem" }} />,
+    icon: <HomeIcon />,
     path: "#home",
   },
   {
     title: "Sobre Nós",
-    icon: <BsPersonBadge style={{ fontSize: "1rem" }} />,
+    icon: <AboutIcon />,
     path: "#aboutus",
   },
   {
     title: "Contatos",
-    icon: <AiOutlinePhone style={{ fontSize: "1rem" }} />,
+    icon: <ContactIcon />,
     path: "#contacts",
   },
 ];

@@ -1,6 +1,9 @@
 import styled from "styled-components";
 import { ZINDEXES, WEIGHTFONT, COLORS } from "../../constants/cssVariables";
 import { Container } from "../Reusables/styles";
+import { SlHome } from "react-icons/sl";
+import { BsPersonBadge } from "react-icons/bs";
+import { AiOutlinePhone } from "react-icons/ai";
 
 export const StyledHeader = styled.header`
   position: fixed;
@@ -55,6 +58,9 @@ export const NavMenu = styled.div`
 `;
 
 export const NavList = styled.ul`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
   @media screen and (max-width: 1023px) {
     display: flex;
     justify-content: space-between;
@@ -65,20 +71,42 @@ export const NavList = styled.ul`
 export const NavItem = styled.li``;
 
 export const NavLink = styled.a`
+  padding: 0 1rem;
   @media screen and (max-width: 1023px) {
     color: ${COLORS.textColor};
     display: flex;
     padding: 0.5rem;
     border-radius: 50%;
-  }
-  i {
-    font-size: 1.25rem;
-  }
-  span {
-    display: none;
+    span {
+      display: none;
+    }
   }
 `;
 
 export const NavButton = styled.a`
   display: none;
+`;
+
+export const HomeIcon = styled(SlHome)`
+  font-size: 1rem;
+  display: none;
+  @media screen and (max-width: 1023px) {
+    display: flex;
+  }
+`;
+
+export const AboutIcon = styled(BsPersonBadge)`
+  font-size: 1rem;
+  display: none;
+  @media screen and (max-width: 1023px) {
+    display: flex;
+  }
+`;
+
+export const ContactIcon = styled(AiOutlinePhone)`
+  font-size: 1rem;
+  display: none;
+  @media screen and (max-width: 1023px) {
+    display: flex;
+  }
 `;

@@ -51,6 +51,7 @@ export const FooterSocialLink = styled.a`
 
 export const FooterCopy = styled.span`
   text-align: center;
+  width: 100%;
   font-size: ${TYPOGRAPHY.smaller};
   font-weight: ${WEIGHTFONT.medium};
   color: ${COLORS.textColor};

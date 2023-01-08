@@ -117,6 +117,7 @@ export const HomeImg = styled.div`
   overflow: hidden;
   border-radius: 12px 12px 12px 12px;
   display: inline-flex;
+  justify-content: center;
   align-items: center;
   bottom: -1.5rem;
   box-shadow: 0 16px 32px hsla(228, 66%, 25%, 0.25);

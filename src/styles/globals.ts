@@ -47,6 +47,7 @@ export const GlobalStyles = createGlobalStyle`
         background: linear-gradient(101deg, hsl(228,66%,53%), hsl(228,66%,47%));
         color: white;
         box-shadow: 0 4px 8px hsla(228,66%,45%,.25);
+        border-radius: 12px;
      }
      ::-webkit-scrollbar{
         width: .6rem;
@@ -84,5 +85,13 @@ export const GlobalStyles = createGlobalStyle`
      }
      .show-scroll{
         bottom: 8rem;
+     }
+
+     @media screen and (max-width: 1023px){
+        .active-link{
+        background: linear-gradient(101deg, hsl(228,66%,53%), hsl(228,66%,47%));
+        color: white;
+        box-shadow: 0 4px 8px hsla(228,66%,45%,.25);
+     }
      }
 `;

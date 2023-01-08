@@ -55,7 +55,7 @@ const Home: React.FC = () => {
         </HomeData>
 
         <HomeImages>
-          <HomeOrbe></HomeOrbe>
+          <HomeOrbe />
 
           <HomeImg>
             <BannerImage

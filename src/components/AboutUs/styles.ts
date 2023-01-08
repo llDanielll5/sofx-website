@@ -24,6 +24,7 @@ export const AboutImages = styled.div`
   position: relative;
   display: flex;
   justify-content: center;
+  align-items: center;
 `;
 
 export const AboutOrbe = styled.div`

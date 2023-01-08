@@ -7,9 +7,19 @@ import {
 import Text from "../Text";
 
 export const Container = styled.div`
-  max-width: 1024px;
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  width: 95%;
+  @media screen and (max-width: 1023px) {
+    max-width: 1024px;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+  @media screen and (max-width: 960px) {
+    max-width: 960px;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
 `;
 
 export const Grid = styled.div`
