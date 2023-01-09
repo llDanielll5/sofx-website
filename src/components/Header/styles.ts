@@ -90,6 +90,9 @@ export const NavButton = styled.a`
 export const HomeIcon = styled(SlHome)`
   font-size: 1rem;
   display: none;
+  &.active-icon {
+    color: white;
+  }
   @media screen and (max-width: 1023px) {
     display: flex;
   }
@@ -98,6 +101,9 @@ export const HomeIcon = styled(SlHome)`
 export const AboutIcon = styled(BsPersonBadge)`
   font-size: 1rem;
   display: none;
+  &.active-icon {
+    color: white;
+  }
   @media screen and (max-width: 1023px) {
     display: flex;
   }
@@ -106,6 +112,9 @@ export const AboutIcon = styled(BsPersonBadge)`
 export const ContactIcon = styled(AiOutlinePhone)`
   font-size: 1rem;
   display: none;
+  &.active-icon {
+    color: white;
+  }
   @media screen and (max-width: 1023px) {
     display: flex;
   }

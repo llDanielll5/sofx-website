@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React from "react";
 import styles from "./Contact.module.css";
 import ContactImage from "../../../public/images/contact.jpg";
@@ -23,8 +22,7 @@ interface ContactCardProps {
 const Contact = () => {
   const msg = `Olá!! 
 Gostaria de receber um orçamento para a criação de uma aplicação para minha empresa!
-Como funciona?
-  `;
+Como funciona?`;
   const ContactCard = (props: ContactCardProps) => {
     return (
       <div className={styles.contact__card_box}>
