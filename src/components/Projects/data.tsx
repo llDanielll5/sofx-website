@@ -1,16 +1,25 @@
 import CodeImage from "../../../public/images/model1.png";
 import PratixImage from "../../../public/images/pratix.jpg";
+import TravelImage from "../../../public/images/travel.png";
 
 export const websites = [
   {
-    title:
-      "Website e-commerce para bijuterias, e produtos relacionados para destaque",
+    title: "Website, e-commerces simples iniciar nas soluções digitais!",
     label: `♦Hospedagem Gratuita!
 ♦Design minimalista e responsivo para Desktop e Mobile
 ♦Serviço de Banco de Dados completo!
 ♦Serviço de implementação de pagamentos completos`,
     link: "https://bijuteria.vercel.app/",
     image: CodeImage,
+  },
+  {
+    title: "Website completos e animados, para empresas exigentes!",
+    label: `♦Hospedagem Gratuita!
+♦Design minimalista e responsivo para Desktop e Mobile
+♦Serviço de Banco de Dados completo!
+♦Serviço de implementação de pagamentos completos`,
+    link: "https://travel-landing-page-model.vercel.app/",
+    image: TravelImage,
   },
 ];
 
