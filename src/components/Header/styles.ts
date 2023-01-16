@@ -3,7 +3,7 @@ import { ZINDEXES, WEIGHTFONT, COLORS } from "../../constants/cssVariables";
 import { Container } from "../Reusables/styles";
 import { SlHome } from "react-icons/sl";
 import { BsPersonBadge } from "react-icons/bs";
-import { AiOutlinePhone } from "react-icons/ai";
+import { AiOutlinePhone, AiOutlineProject } from "react-icons/ai";
 
 export const StyledHeader = styled.header`
   position: fixed;
@@ -88,6 +88,17 @@ export const NavButton = styled.a`
 `;
 
 export const HomeIcon = styled(SlHome)`
+  font-size: 1rem;
+  display: none;
+  &.active-icon {
+    color: white;
+  }
+  @media screen and (max-width: 1023px) {
+    display: flex;
+  }
+`;
+
+export const ProjectsIcon = styled(AiOutlineProject)`
   font-size: 1rem;
   display: none;
   &.active-icon {

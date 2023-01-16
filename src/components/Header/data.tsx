@@ -1,4 +1,4 @@
-import { AboutIcon, ContactIcon, HomeIcon } from "./styles";
+import { AboutIcon, ContactIcon, HomeIcon, ProjectsIcon } from "./styles";
 
 export const NavItems = [
   {
@@ -10,6 +10,11 @@ export const NavItems = [
     title: "Sobre Nós",
     icon: <AboutIcon />,
     path: "#aboutus",
+  },
+  {
+    title: "Projetos Modelos",
+    icon: <ProjectsIcon />,
+    path: "#projects",
   },
   {
     title: "Contatos",

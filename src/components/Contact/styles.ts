@@ -16,8 +16,12 @@ export const ContactSection = styled.section`
 `;
 
 export const ContactContainer = styled(Container)`
-  display: grid;
-  row-gap: 2rem;
+  row-gap: 0;
+  margin-top: -50px;
+  @media screen and (max-width: 1024px) {
+    display: grid;
+    row-gap: 2rem;
+  }
 `;
 
 export const ContactImg = styled(Image)`

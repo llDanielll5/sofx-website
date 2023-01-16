@@ -24,10 +24,13 @@ export const AboutContainer = styled(Container)`
 `;
 
 export const AboutImages = styled.div`
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: none;
+  @media screen and (max-width: 1023px) {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 export const AboutOrbe = styled.div`
@@ -38,13 +41,17 @@ export const AboutOrbe = styled.div`
 `;
 
 export const AboutImg = styled.div`
-  position: absolute;
-  width: 300px;
-  overflow: hidden;
-  border-radius: 125px 125px 12px 12px;
-  inset: 0;
-  margin: auto;
-  box-shadow: 0 16px 32px hsla(228, 66%, 25%, 0.3);
+  display: none;
+  @media screen and (max-width: 1023px) {
+    position: absolute;
+    width: 300px;
+    overflow: hidden;
+    display: flex;
+    border-radius: 125px 125px 12px 12px;
+    inset: 0;
+    margin: auto;
+    box-shadow: 0 16px 32px hsla(228, 66%, 25%, 0.3);
+  }
 `;
 
 export const AboutContent = styled.div`

@@ -1,9 +1,5 @@
 .contact__images {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+  display: none;
 }
 
 .contact__orbe {
@@ -27,6 +23,8 @@
   border: 2px solid hsl(228, 99%, 98%);
   box-shadow: 0 16px 32px rgba(200, 200, 200, 0.5);
   transition: 0.3s;
+  width: 50vw;
+  margin: 0 auto;
 }
 .contact__card_box:hover {
   box-shadow: 0 8px 25px hsla(228, 66%, 45%, 0.1);
@@ -53,5 +51,12 @@
   }
   .contact__card_description {
     font-size: 0.813rem;
+  }
+  .contact__images {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
   }
 }

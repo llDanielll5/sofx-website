@@ -98,12 +98,15 @@ const AboutUs = () => {
 
         <AboutContent>
           <AboutData>
-            <SectionSubtitle></SectionSubtitle>
+            <SectionSubtitle>Sobre nós</SectionSubtitle>
             <H2SectionTitle>
-              <span></span>
+              Nossos Valores<span>.</span>
             </H2SectionTitle>
 
-            <Paragraph id="valueDescription"></Paragraph>
+            <Paragraph id="valueDescription">
+              Procuramos trazer sempre a qualificação e solução para sua
+              empresa!
+            </Paragraph>
           </AboutData>
 
           <AboutAccordion ref={accordionItemRef}>

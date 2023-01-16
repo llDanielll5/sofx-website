@@ -4,6 +4,7 @@ import AboutUs from "../AboutUs";
 import Contact from "../Contact";
 import Footer from "../Footer";
 import Home from "../Home";
+import Projects from "../Projects";
 import { ScrollUpIcon, StyledMain } from "./styles";
 
 const Main = () => {
@@ -22,6 +23,7 @@ const Main = () => {
     <StyledMain>
       <Home />
       <AboutUs />
+      <Projects />
       <Contact />
       <Footer />
       <a href="#" className="scrollup" id="scroll_up">
