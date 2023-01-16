@@ -17,7 +17,10 @@ const Projects = () => {
   const ProjectsItems = (props: any) => (
     <LinkStyled href={props.link} passHref target={"_blank"}>
       <ProjectContainer>
-        <Paragraph size="h3Font" style={{ textAlign: "center" }}>
+        <Paragraph
+          size="h3Font"
+          style={{ textAlign: "center", padding: "4px 12px" }}
+        >
           {props.title}
         </Paragraph>
         <Image alt={"Coding Image"} src={props.image} />
@@ -35,7 +38,7 @@ const Projects = () => {
               Visualize nossos modelos de<span>:</span>
             </H2SectionTitle>
 
-            <h2>Sites Completos!</h2>
+            <h2 style={{ textAlign: "center" }}>Sites Completos!</h2>
             <Paragraph style={{ textAlign: "center" }}>
               Clique no site para visualizar
             </Paragraph>
@@ -52,7 +55,9 @@ const Projects = () => {
               ))}
             </ProjectsRow>
 
-            <h2 style={{ marginTop: "12px" }}>Aplicativos Completos!</h2>
+            <h2 style={{ marginTop: "12px", textAlign: "center" }}>
+              Aplicativos Completos!
+            </h2>
             <Paragraph style={{ textAlign: "center" }}>
               Clique para baixar o app!
             </Paragraph>

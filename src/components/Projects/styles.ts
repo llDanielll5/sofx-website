@@ -19,11 +19,14 @@ export const ProjectsRow = styled("div")`
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  @media screen and (max-width: 1024px) {
+    display: block;
+  }
 `;
 
 export const LinkStyled = styled(Link)`
-  width: calc(100vw / 2);
+  width: calc(100vw / 2 - 24px);
   @media screen and (max-width: 1024px) {
-    width: 95vw;
+    width: 100%;
   }
 `;
