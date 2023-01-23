@@ -23,9 +23,6 @@ const Footer = () => {
           <FooterLogo href="#">
             DGS Softwares <GiLaptop />
           </FooterLogo>
-          <p className={styles.footer_description}>
-            Conectando facilidade e praticidade <br /> Para toda sua empresa!
-          </p>
         </div>
 
         <div className={styles.footer_content}>

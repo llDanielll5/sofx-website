@@ -12,6 +12,8 @@ import {
 } from "./styles";
 import { contactData } from "./data";
 import Link from "next/link";
+import TextFadeIn from "../TextFadeIn";
+import { COLORS } from "../../constants/cssVariables";
 
 interface ContactCardProps {
   icon: any;
@@ -47,26 +49,11 @@ Como funciona?`;
     );
   };
   return (
-    <ContactSection id="contacts">
+    <ContactSection>
       <ContactContainer>
-        <div className={styles.contact__images}>
-          <div className={styles.contact__orbe}>
-            <div className={styles.contact_img}>
-              <ContactImg
-                src={ContactImage}
-                alt="Contact us"
-                objectFit="cover"
-              />
-            </div>
-          </div>
-        </div>
-
         <div className={styles.contact__content}>
           <div className={styles.contact__data}>
-            <SubtitleContact>Contate-nos</SubtitleContact>
-            <TitleContact>
-              Facilitamos orçamentos <span>.</span>
-            </TitleContact>
+            <TextFadeIn backColor={"white"} content="Contate-nos" />
 
             <ContactDescription>
               Necessita de alguma solução para sua empresa? Alguma tecnologia

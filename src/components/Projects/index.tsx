@@ -12,6 +12,8 @@ import {
 } from "../AboutUs/styles";
 import { appsMobile, websites } from "./data";
 import { LinkStyled, ProjectContainer, ProjectsRow } from "./styles";
+import TextFadeIn from "../TextFadeIn";
+import { COLORS } from "../../constants/cssVariables";
 
 const Projects = () => {
   const ProjectsItems = (props: any) => (
@@ -29,14 +31,11 @@ const Projects = () => {
   );
 
   return (
-    <StyledAbout id="projects">
+    <StyledAbout>
       <AboutContainer>
         <AboutContent>
           <AboutData>
-            <SectionSubtitle>Visualizar Projetos</SectionSubtitle>
-            <H2SectionTitle>
-              Visualize nossos modelos de<span>:</span>
-            </H2SectionTitle>
+            <TextFadeIn backColor={"white"} content="Projetos" />
 
             <h2 style={{ textAlign: "center" }}>Sites Completos!</h2>
             <Paragraph style={{ textAlign: "center" }}>
@@ -55,7 +54,7 @@ const Projects = () => {
               ))}
             </ProjectsRow>
 
-            <h2 style={{ marginTop: "12px", textAlign: "center" }}>
+            {/* <h2 style={{ marginTop: "12px", textAlign: "center" }}>
               Aplicativos Completos!
             </h2>
             <Paragraph style={{ textAlign: "center" }}>
@@ -72,7 +71,7 @@ const Projects = () => {
                   link={item.link}
                 />
               ))}
-            </ProjectsRow>
+            </ProjectsRow> */}
           </AboutData>
         </AboutContent>
       </AboutContainer>

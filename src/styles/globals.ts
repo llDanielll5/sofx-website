@@ -12,6 +12,7 @@ export const GlobalStyles = createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
         font-family: 'Poppins', sans-serif;
+        transition: all .5s linear;
     }
     html {
         scroll-behavior: smooth;
@@ -20,9 +21,9 @@ export const GlobalStyles = createGlobalStyle`
     body {
         background-color: white;
         color: ${COLORS.textColor};
-        font-size: ${TYPOGRAPHY.normal};
+        font-size: 50%;
         @media screen and (min-width: 1024px){
-            font-size: ${TYPOGRAPHY1024.normal};
+            font-size: 66%;
         }
     }
     ul{
@@ -42,6 +43,9 @@ export const GlobalStyles = createGlobalStyle`
     h1,h2,h3{
         font-weight: ${WEIGHTFONT.semibold};
         color: ${COLORS.titleColor}
+    }
+    .section{
+        height: 100vh;
     }
     .active-link{
         background: linear-gradient(101deg, hsl(228,66%,53%), hsl(228,66%,47%));
@@ -72,7 +76,7 @@ export const GlobalStyles = createGlobalStyle`
         box-shadow: 0 8px 12px hsla(228, 66%, 45%,.1);
         display: inline-flex;
         padding: .35rem;
-        border-radius: .25rem;
+        border-radius: 50%;
         color: hsl(228,57%,28%);
         font-size: 1.25rem;
         z-index: 10;
@@ -84,7 +88,7 @@ export const GlobalStyles = createGlobalStyle`
         color: hsl(228, 66%, 53%);
      }
      .show-scroll{
-        bottom: 8rem;
+        bottom: 7rem;
      }
 
      @media screen and (max-width: 1023px){

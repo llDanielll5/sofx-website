@@ -10,15 +10,12 @@ export const StyledHeader = styled.header`
   top: 0;
   left: 0;
   width: 100%;
-  background-color: transparent;
   z-index: ${ZINDEXES.zFixed};
   transition: 0.4s;
-  &.scroll-header {
-    background-color: ${COLORS.bodyColor};
-    box-shadow: 0 1px 4px hsla(228, 4%, 15%, 0.1);
-    #NavLogo {
-      color: ${COLORS.firstColor};
-    }
+  background-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 1px 4px hsla(228, 4%, 15%, 0.1);
+  #NavLogo {
+    color: ${COLORS.firstColor};
   }
 `;
 
@@ -35,9 +32,14 @@ export const NavLogo = styled.a`
   align-items: center;
   column-gap: 0.25rem;
   font-weight: ${WEIGHTFONT.medium};
+  font-size: 1rem;
   transition: 0.3s;
   :hover {
     color: ${COLORS.firstColor};
+  }
+  @media screen and (max-width: 1023px) {
+    font-size: 1.5rem;
+    margin: 0 auto;
   }
 `;
 
@@ -72,6 +74,7 @@ export const NavItem = styled.li``;
 
 export const NavLink = styled.a`
   padding: 0 1rem;
+  font-size: 1rem;
   @media screen and (max-width: 1023px) {
     color: ${COLORS.textColor};
     display: flex;

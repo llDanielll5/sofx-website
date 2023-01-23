@@ -48,6 +48,7 @@
 @media screen and (max-width: 1024px) {
   .contact__card_title {
     font-size: 1rem;
+    padding-top: 0.5rem;
   }
   .contact__card_description {
     font-size: 0.813rem;
@@ -58,5 +59,24 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+  }
+  .contact__content {
+    padding-bottom: 0;
+  }
+  .contact__data {
+    margin-top: 1rem;
+  }
+  .contact__card_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 8px;
+    border-radius: 12px;
+    border: 2px solid hsl(228, 99%, 98%);
+    box-shadow: 0 16px 32px rgba(200, 200, 200, 0.5);
+    transition: 0.3s;
+    width: 90vw;
+    margin: 0 auto;
   }
 }

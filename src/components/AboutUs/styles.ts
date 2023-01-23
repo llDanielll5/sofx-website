@@ -13,6 +13,7 @@ import {
 
 export const StyledAbout = styled.section`
   padding: 4.5rem 0 2rem;
+  height: 100vh;
   @media screen and (max-width: 1023px) {
     padding: 4.5rem 1rem 2rem 0;
   }
@@ -20,12 +21,13 @@ export const StyledAbout = styled.section`
 
 export const AboutContainer = styled(Container)`
   display: grid;
-  row-gap: 3rem;
+  /* row-gap: 3rem; */
 `;
 
 export const AboutImages = styled.div`
   display: none;
   @media screen and (max-width: 1023px) {
+    margin-top: 1rem;
     position: relative;
     display: flex;
     justify-content: center;
@@ -56,12 +58,14 @@ export const AboutImg = styled.div`
 
 export const AboutContent = styled.div`
   #valueDescription {
-    font-size: ${TYPOGRAPHY.small};
+    font-size: ${TYPOGRAPHY.h2Font};
     margin-bottom: 2rem;
+    color: ${COLORS.firstColor};
+    text-align: center;
   }
 
   @media screen and (max-width: 1024px) {
-    font-size: ${TYPOGRAPHY1024.small};
+    font-size: ${TYPOGRAPHY1024.h2Font};
   }
 `;
 
@@ -73,7 +77,7 @@ export const H2SectionTitle = styled.h2`
 
 export const AboutAccordion = styled.div`
   display: grid;
-  row-gap: 1.5rem;
+  /* row-gap: 1.5rem; */
 `;
 
 export const AboutAccordionItem = styled.div`

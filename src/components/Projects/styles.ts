@@ -19,9 +19,6 @@ export const ProjectsRow = styled("div")`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  @media screen and (max-width: 1024px) {
-    display: block;
-  }
 `;
 
 export const LinkStyled = styled(Link)`

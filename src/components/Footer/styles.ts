@@ -7,7 +7,6 @@ import {
   TYPOGRAPHY1024,
   WEIGHTFONT,
 } from "../../constants/cssVariables";
-import { Section } from "../Reusables/styles";
 
 export const FacebookIcon = styled(FaFacebookSquare)``;
 
@@ -15,21 +14,26 @@ export const InstagramIcon = styled(BsInstagram)``;
 
 export const FooterLogo = styled.a`
   color: ${COLORS.firstColor};
-  font-size: ${TYPOGRAPHY.h3Font};
+  font-size: ${TYPOGRAPHY.h2Font};
   font-weight: ${WEIGHTFONT.semibold};
   display: inline-flex;
   align-items: center;
   column-gap: 0.25rem;
-  margin-bottom: 0.75rem;
   padding-top: 1rem;
   @media screen and (max-width: 1024px) {
     font-size: ${TYPOGRAPHY1024.h3Font};
+    margin: 0 auto;
   }
 `;
 
 export const FooterSection = styled.footer`
   padding: 0 1.5rem 0 1.5rem;
-  background-color: ${COLORS.firstColorLighten};
+  background-color: #ccc;
+  margin-top: 4rem;
+  height: 40vh;
+  @media screen and (max-width: 1023px) {
+    margin-top: 1.2rem;
+  }
 `;
 
 export const FooterTitle = styled.h3`
@@ -37,6 +41,7 @@ export const FooterTitle = styled.h3`
   margin-bottom: 1rem;
   @media screen and (max-width: 1024px) {
     font-size: ${TYPOGRAPHY1024.h3Font};
+    margin-bottom: 0.2rem;
   }
 `;
 
@@ -52,10 +57,10 @@ export const FooterSocialLink = styled.a`
 export const FooterCopy = styled.span`
   text-align: center;
   width: 100%;
-  font-size: ${TYPOGRAPHY.smaller};
+  font-size: ${TYPOGRAPHY.small};
   font-weight: ${WEIGHTFONT.medium};
-  color: ${COLORS.textColor};
+  color: ${COLORS.firstColor};
   @media screen and (max-width: 1024px) {
-    font-size: ${TYPOGRAPHY1024.smaller};
+    font-size: ${TYPOGRAPHY1024.small};
   }
 `;

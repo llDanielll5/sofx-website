@@ -9,18 +9,17 @@ import { Container, Section } from "../Reusables/styles";
 import { BsWhatsapp } from "react-icons/bs";
 
 export const ContactSection = styled.section`
-  padding: 4.5rem 0 2rem;
+  padding: 6rem 0 0;
+  height: 50vh;
   @media screen and (max-width: 1023px) {
-    padding: 4.5rem 1rem 2rem 0;
+    padding: 4.5rem 1rem 0 0;
   }
 `;
 
 export const ContactContainer = styled(Container)`
   row-gap: 0;
-  margin-top: -50px;
   @media screen and (max-width: 1024px) {
     display: grid;
-    row-gap: 2rem;
   }
 `;
 
@@ -50,10 +49,13 @@ export const TitleContact = styled.h2`
 `;
 
 export const ContactDescription = styled.p`
-  font-size: ${TYPOGRAPHY.small};
+  font-size: ${TYPOGRAPHY.h2Font};
   margin-bottom: 2.5rem;
+  text-align: center;
   @media screen and (max-width: 1024px) {
-    font-size: ${TYPOGRAPHY1024.small};
+    margin-bottom: 0;
+    margin-top: 1rem;
+    font-size: ${TYPOGRAPHY1024.normal};
   }
 `;
 

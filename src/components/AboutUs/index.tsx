@@ -23,6 +23,8 @@ import {
   H2SectionTitle,
   StyledAbout,
 } from "./styles";
+import TextFadeIn from "../TextFadeIn";
+import { COLORS } from "../../constants/cssVariables";
 
 export interface AboutItems {
   icon: any;
@@ -86,28 +88,12 @@ const AboutUs = () => {
     </AboutAccordionItem>
   );
   return (
-    <StyledAbout id="aboutus">
+    <StyledAbout>
       <AboutContainer>
-        <AboutImages>
-          <AboutOrbe />
-
-          <AboutImg>
-            <Image alt={"Coding Image"} src={CodeImage} />
-          </AboutImg>
-        </AboutImages>
-
         <AboutContent>
-          <AboutData>
-            <SectionSubtitle>Sobre nós</SectionSubtitle>
-            <H2SectionTitle>
-              Nossos Valores<span>.</span>
-            </H2SectionTitle>
+          <TextFadeIn content="Sobre Nós" backColor={"white"} />
 
-            <Paragraph id="valueDescription">
-              Procuramos trazer sempre a qualificação e solução para sua
-              empresa!
-            </Paragraph>
-          </AboutData>
+          <Paragraph id="valueDescription">Conheça mais sobre nós!</Paragraph>
 
           <AboutAccordion ref={accordionItemRef}>
             {aboutData?.map((item, i) => (

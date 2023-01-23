@@ -1,5 +1,5 @@
 import Image from "next/legacy/image";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import {
   COLORS,
   TYPOGRAPHY,
@@ -10,11 +10,11 @@ import Paragraph from "../Paragraph";
 import { Container, Section } from "../Reusables/styles";
 import { MdLocationOn } from "react-icons/md";
 import Button from "../Button";
+import TextFadeIn from "../TextFadeIn";
 
 export const HomeSection = styled.section`
-  background: linear-gradient(170deg, hsl(0, 0%, 22%) 0%, hsl(0, 0%, 6%) 30%);
-  padding-bottom: 0;
   padding: 4.5rem 0 2rem;
+  height: 100vh;
   @media screen and (max-width: 1023px) {
     padding: 4.5rem 1rem 2rem 0;
   }
@@ -22,26 +22,110 @@ export const HomeSection = styled.section`
 
 export const HomeContainer = styled(Container)`
   display: grid;
-  padding-top: 4rem;
-  row-gap: 3.5rem;
+  padding-top: 7rem;
+  @media screen and (max-width: 1023px) {
+    padding-top: 7rem;
+  }
 `;
 
-export const HomeData = styled.div``;
+export const HomeData = styled.div`
+  background-image: url("/images/backgroundDGS.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 99.8vh;
+  width: 99.8vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+`;
+
+export const HomeInnerContainer = styled.div`
+  z-index: 2;
+  background-color: rgba(57, 76, 150, 0.6);
+  height: 99.9vh;
+  width: 99.9vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+`;
+
+const animateText = keyframes`
+0% {
+      right: -50%;
+    }
+    15%{
+        right: 10%;
+    }
+    50% {
+      right: 20%;
+    }
+    70%{
+        right: 10%
+    }
+    90%{
+        right: -15%
+    }
+    100%{
+      right: -30%
+    }
+`;
+const animateTextMobile = keyframes`
+0% {
+      right: -100%;
+    }
+    15%{
+        right:2%;
+    }
+    50% {
+      right: 5%;
+    }
+    70%{
+        right: 4%
+    }
+    90%{
+        right: 2%
+    }
+    100%{
+      right: -100%
+    }
+`;
 
 export const HomeTitle = styled.h1`
+  font-size: 4rem;
   color: white;
-  font-size: ${TYPOGRAPHY.biggest};
-  line-height: 120%;
-  margin-bottom: 1.25rem;
-
-  @media screen and (min-width: 1024px) {
-    font-size: ${TYPOGRAPHY1024.biggest};
+  padding-top: 6rem;
+  z-index: 3;
+  position: absolute;
+  right: -20%;
+  animation-name: ${animateText};
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  @media screen and (max-width: 960px) {
+    font-size: 2rem;
+    animation-name: ${animateTextMobile};
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
   }
 `;
 
 export const HomeDescription = styled(Paragraph)`
-  color: ${COLORS.textColor};
-  margin-bottom: 2rem;
+  font-size: ${TYPOGRAPHY.h2Font};
+  color: white;
+  padding-top: 16rem;
+  z-index: 3;
+  position: absolute;
+  right: -20%;
+  animation-name: ${animateText};
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  @media screen and (max-width: 960px) {
+    font-size: ${TYPOGRAPHY1024.h3Font};
+    text-align: center;
+    animation-name: ${animateTextMobile};
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+  }
 `;
 
 export const HomeSearch = styled.form`
