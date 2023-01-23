@@ -48,9 +48,9 @@ const Main = () => {
         navigation
         navigationTooltips={pages}
         sectionsColor={sectionColors}
-        scrollingSpeed={2000}
+        // scrollingSpeed={2000}
         scrollHorizontally
-        animateAnchor
+        // animateAnchor
         onLeave={(origin, destination, direction) => {
           if (destination.anchor === "home") {
             setActivePage("home");
