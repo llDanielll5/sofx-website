@@ -84,7 +84,7 @@ export const AboutAccordionItem = styled.div`
   background-color: ${COLORS.bodyColor};
   border: 2px solid ${COLORS.borderColor};
   border-radius: 0.5rem;
-  padding: 1rem 0.75rem;
+  padding: 2rem 0.75rem;
   transition: 1s;
   box-shadow: ${({ dynamicHeight }) =>
     dynamicHeight === 0 ? undefined : "0 12px 50px hsla(228, 66%, 45%, 0.1)"};

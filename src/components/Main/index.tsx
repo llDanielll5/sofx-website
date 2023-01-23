@@ -15,8 +15,6 @@ import {
 import Header from "../Header";
 import Contact from "../Contact";
 import Footer from "../Footer";
-import { COLORS } from "../../constants/cssVariables";
-import { WhatsappIcon } from "../Contact/styles";
 
 export type PagesType = "home" | "aboutus" | "projects" | "contacts";
 
@@ -25,6 +23,12 @@ const Main = () => {
   const pages = ["home", "aboutus", "projects", "contacts"];
   const [activePage, setActivePage] = useState<PagesType>("home");
   const sectionColors = ["rgba(0,0,0,0.6)", "white", "white", "white"];
+  const msg = `Olá!! 
+  Gostaria de receber um orçamento para a criação de uma aplicação para minha empresa!
+  Como funciona?`;
+  const zapHref = `https://api.whatsapp.com/send?phone=5561991538781&text=${encodeURIComponent(
+    msg
+  )}`;
 
   const scrollUp = useCallback(() => {
     const scroll_up = document.getElementById("scroll_up");
@@ -89,7 +93,13 @@ const Main = () => {
           );
         }}
       />
-      <a href="#" className="scrollup" id="scroll_up">
+      <a
+        href={zapHref}
+        className="scrollup"
+        id="scroll_up"
+        target={"_blank"}
+        rel="noreferrer"
+      >
         <ScrollUpIcon color={"#25D366"} />
       </a>
     </StyledMain>
