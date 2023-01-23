@@ -8,7 +8,7 @@ import {
 import { Container, Section } from "../Reusables/styles";
 import { BsWhatsapp } from "react-icons/bs";
 
-export const ContactSection = styled.section`
+export const ContactSection = styled.div`
   padding: 6rem 0 0;
   height: 50vh;
   @media screen and (max-width: 1023px) {

@@ -16,9 +16,9 @@ export const NavItems = [
     icon: <ProjectsIcon />,
     path: "#projects",
   },
-  {
-    title: "Contatos",
-    icon: <ContactIcon />,
-    path: "#contacts",
-  },
+  // {
+  //   title: "Contatos",
+  //   icon: <ContactIcon />,
+  //   path: "#contacts",
+  // },
 ];

@@ -1,9 +1,6 @@
 //@ts-nocheck
-import Image from "next/legacy/image";
 import React, { useState, useRef, useEffect } from "react";
 import Paragraph from "../Paragraph";
-import CodeImage from "../../../public/images/code.png";
-import { SectionSubtitle } from "../Reusables/styles";
 import { aboutData } from "./data";
 import {
   AboutAccordion,
@@ -15,16 +12,10 @@ import {
   AboutAccordionTitle,
   AboutContainer,
   AboutContent,
-  AboutData,
-  AboutImages,
-  AboutImg,
-  AboutOrbe,
   ArrowDownIcon,
-  H2SectionTitle,
   StyledAbout,
 } from "./styles";
 import TextFadeIn from "../TextFadeIn";
-import { COLORS } from "../../constants/cssVariables";
 
 export interface AboutItems {
   icon: any;

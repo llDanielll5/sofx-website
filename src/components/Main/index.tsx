@@ -1,11 +1,9 @@
 //@ts-nocheck
 import React, { useEffect, useCallback, useState } from "react";
-import { useGetScrollPosition } from "../../hooks/useGetScrollPosition";
-import AboutUs from "../AboutUs";
-import Projects from "../Projects";
 import { ScrollUpIcon, StyledMain } from "./styles";
-import ReactFullpage from "@fullpage/react-fullpage";
+import { useGetScrollPosition } from "../../hooks/useGetScrollPosition";
 import {
+  ArrowDown,
   HomeContainer,
   HomeData,
   HomeDescription,
@@ -13,14 +11,15 @@ import {
   HomeTitle,
 } from "../Home/styles";
 import Header from "../Header";
-import Contact from "../Contact";
-import Footer from "../Footer";
+import AboutUs from "../AboutUs";
+import Projects from "../Projects";
+import ReactFullpage from "@fullpage/react-fullpage";
 
-export type PagesType = "home" | "aboutus" | "projects" | "contacts";
+export type PagesType = "home" | "aboutus" | "projects";
 
 const Main = () => {
   const currentScroll = useGetScrollPosition();
-  const pages = ["home", "aboutus", "projects", "contacts"];
+  const pages = ["home", "aboutus", "projects"];
   const [activePage, setActivePage] = useState<PagesType>("home");
   const sectionColors = ["rgba(0,0,0,0.6)", "white", "white", "white"];
   const msg = `Olá!! 
@@ -46,11 +45,12 @@ const Main = () => {
       <Header activePage={activePage} />
       <ReactFullpage
         anchors={pages}
-        navigation={false}
+        navigation
         navigationTooltips={pages}
         sectionsColor={sectionColors}
-        scrollingSpeed={1000}
-        scrollHorizontally={false}
+        scrollingSpeed={2000}
+        scrollHorizontally
+        animateAnchor
         onLeave={(origin, destination, direction) => {
           if (destination.anchor === "home") {
             setActivePage("home");
@@ -76,6 +76,7 @@ const Main = () => {
                     Alavanque vendas e organize sua empresa com nossos Softwares
                     de ponta.
                   </HomeDescription>
+                  <ArrowDown onClick={() => fullpageApi.moveSectionDown()} />
                 </HomeContainer>
               </div>
 
@@ -85,10 +86,10 @@ const Main = () => {
               <div className="section" id="projects">
                 <Projects />
               </div>
-              <div className="section" id="contacts">
+              {/* <div className="section" id="contacts">
                 <Contact />
                 <Footer />
-              </div>
+              </div> */}
             </ReactFullpage.Wrapper>
           );
         }}

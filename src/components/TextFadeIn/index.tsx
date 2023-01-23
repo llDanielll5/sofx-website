@@ -8,7 +8,7 @@ const TextFadeIn = (props: { content: string; backColor: string }) => {
 
 const animateText = keyframes`
     0% {
-      left: -5%;
+      left: 0%;
     }
     15%{
         left: 30%;
@@ -33,13 +33,13 @@ const Text = styled("h2")<{ backColor: string }>`
   ::before {
     content: "";
     position: absolute;
-    left: 0%;
+    left: 10%;
     width: 120%;
     height: 100%;
     background: ${({ backColor }) =>
       `linear-gradient(90deg, transparent 0%, ${backColor} 5%, ${backColor} 100%)`};
     animation-name: ${animateText};
-    animation-duration: 7s;
+    animation-duration: 5s;
     animation-iteration-count: infinite;
   }
   @media screen and (max-width: 960px) {

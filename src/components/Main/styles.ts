@@ -3,8 +3,8 @@ import { FaChevronCircleUp } from "react-icons/fa";
 import { AiOutlineWhatsApp } from "react-icons/ai";
 
 export const StyledMain = styled.div`
-  overflow: hidden;
-  width: 100%;
+  /* overflow: hidden; */
+  width: 100vw;
   @media screen and (max-width: 1024px) {
     max-width: 1024px;
   }

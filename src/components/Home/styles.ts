@@ -10,11 +10,10 @@ import Paragraph from "../Paragraph";
 import { Container, Section } from "../Reusables/styles";
 import { MdLocationOn } from "react-icons/md";
 import Button from "../Button";
-import TextFadeIn from "../TextFadeIn";
+import { AiOutlineArrowDown } from "react-icons/ai";
 
-export const HomeSection = styled.section`
+export const HomeSection = styled.div`
   padding: 4.5rem 0 2rem;
-  height: 100vh;
   @media screen and (max-width: 1023px) {
     padding: 4.5rem 1rem 2rem 0;
   }
@@ -232,6 +231,20 @@ export const SearchButton = styled(Button)`
 
   @media screen and (min-width: 1024px) {
     font-size: ${TYPOGRAPHY1024.normal};
+  }
+`;
+
+export const ArrowDown = styled(AiOutlineArrowDown)`
+  position: absolute;
+  left: 50%;
+  right: 0;
+  bottom: 20px;
+  color: white;
+  z-index: 2;
+  font-size: 3rem;
+  cursor: pointer;
+  @media screen and (max-width: 1023px) {
+    bottom: 7rem;
   }
 `;
 
