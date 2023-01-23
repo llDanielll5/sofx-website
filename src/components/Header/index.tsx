@@ -1,6 +1,7 @@
 //@ts-nocheck
 import React, { useCallback, useEffect, useRef } from "react";
 import { GiLaptop } from "react-icons/gi";
+import { useGetScrollPosition } from "../../hooks/useGetScrollPosition";
 import { PagesType } from "../Main";
 import { NavItems } from "./data";
 import {
@@ -14,103 +15,107 @@ import {
   StyledNav,
 } from "./styles";
 
-const Header = (props: { activePage: PagesType }) => {
+interface HeaderProps {
+  activePage: PagesType;
+  onChangeActivePage: (e: any) => void;
+}
+
+const Header = (props: HeaderProps) => {
   const headerRef = useRef<HTMLDivElement>(null);
   const navRef = useRef<HTMLDivElement>(null);
-  // const currentScroll = useGetScrollPosition();
-  // const scrollHeader = useCallback(() => {
-  //   const header = headerRef?.current;
-  //   if (currentScroll >= 50) header?.classList.add("scroll-header");
-  //   else header?.classList.remove("scroll-header");
-  // }, [currentScroll]);
+  const currentScroll = useGetScrollPosition();
+  const scrollHeader = useCallback(() => {
+    const header = headerRef?.current;
+    if (currentScroll >= 50) header?.classList.add("scroll-header");
+    else header?.classList.remove("scroll-header");
+  }, [currentScroll]);
 
-  // const getActiveScroll = useCallback(() => {
-  //   const sections = document.querySelectorAll("section[id]");
+  const getActiveScroll = useCallback(() => {
+    const sections = document.querySelectorAll("div[id]");
+    function scrollActive() {
+      const scrollY = window.scrollY;
 
-  //   function scrollActive() {
-  //     const scrollY = window.scrollY;
+      sections.forEach((item, index) => {
+        const sectionHeight = item?.offsetHeight;
+        const sectionTop = item?.offsetTop - 58;
+        const sectionId = item?.getAttribute("id");
 
-  //     sections.forEach((item, index) => {
-  //       const sectionHeight = item?.offsetHeight;
-  //       const sectionTop = item?.offsetTop - 58;
-  //       const sectionId = item?.getAttribute("id");
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+          navRef?.current
+            ?.querySelector("a[href*=" + sectionId + "]")
+            ?.classList.add("active-link");
+        } else {
+          navRef?.current
+            ?.querySelector("a[href*=" + sectionId + "]")
+            ?.classList.remove("active-link");
+        }
+      });
+    }
+    scrollActive();
+  }, []);
 
-  //       if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-  //         navRef?.current
-  //           ?.querySelector("a[href*=" + sectionId + "]")
-  //           ?.classList.add("active-link");
-  //       } else {
-  //         navRef?.current
-  //           ?.querySelector("a[href*=" + sectionId + "]")
-  //           ?.classList.remove("active-link");
-  //       }
-  //     });
+  // const getActivePageScrolled = () => {
+  //   if (props.activePage === "home") {
+  //     navRef?.current
+  //       ?.querySelector("a[href*=" + "home" + "]")
+  //       ?.classList.add("active-link");
+  //     navRef?.current
+  //       ?.querySelector("a[href*=" + "aboutus" + "]")
+  //       ?.classList.remove("active-link");
+  //     navRef?.current
+  //       ?.querySelector("a[href*=" + "projects" + "]")
+  //       ?.classList.remove("active-link");
+  //     navRef?.current
+  //       ?.querySelector("a[href*=" + "contacts" + "]")
+  //       ?.classList.remove("active-link");
   //   }
-  //   scrollActive();
-  // }, []);
-
-  const getActivePageScrolled = () => {
-    if (props.activePage === "home") {
-      navRef?.current
-        ?.querySelector("a[href*=" + "home" + "]")
-        ?.classList.add("active-link");
-      navRef?.current
-        ?.querySelector("a[href*=" + "aboutus" + "]")
-        ?.classList.remove("active-link");
-      navRef?.current
-        ?.querySelector("a[href*=" + "projects" + "]")
-        ?.classList.remove("active-link");
-      navRef?.current
-        ?.querySelector("a[href*=" + "contacts" + "]")
-        ?.classList.remove("active-link");
-    }
-    if (props.activePage === "aboutus") {
-      navRef?.current
-        ?.querySelector("a[href*=" + "aboutus" + "]")
-        ?.classList.add("active-link");
-      navRef?.current
-        ?.querySelector("a[href*=" + "home" + "]")
-        ?.classList.remove("active-link");
-      navRef?.current
-        ?.querySelector("a[href*=" + "projects" + "]")
-        ?.classList.remove("active-link");
-      navRef?.current
-        ?.querySelector("a[href*=" + "contacts" + "]")
-        ?.classList.remove("active-link");
-    }
-    if (props.activePage === "projects") {
-      navRef?.current
-        ?.querySelector("a[href*=" + "projects" + "]")
-        ?.classList.add("active-link");
-      navRef?.current
-        ?.querySelector("a[href*=" + "aboutus" + "]")
-        ?.classList.remove("active-link");
-      navRef?.current
-        ?.querySelector("a[href*=" + "home" + "]")
-        ?.classList.remove("active-link");
-      navRef?.current
-        ?.querySelector("a[href*=" + "contacts" + "]")
-        ?.classList.remove("active-link");
-    }
-    if (props.activePage === "contacts") {
-      navRef?.current
-        ?.querySelector("a[href*=" + "contacts" + "]")
-        ?.classList.add("active-link");
-      navRef?.current
-        ?.querySelector("a[href*=" + "aboutus" + "]")
-        ?.classList.remove("active-link");
-      navRef?.current
-        ?.querySelector("a[href*=" + "projects" + "]")
-        ?.classList.remove("active-link");
-      navRef?.current
-        ?.querySelector("a[href*=" + "home" + "]")
-        ?.classList.remove("active-link");
-    }
-  };
+  //   if (props.activePage === "aboutus") {
+  //     navRef?.current
+  //       ?.querySelector("a[href*=" + "aboutus" + "]")
+  //       ?.classList.add("active-link");
+  //     navRef?.current
+  //       ?.querySelector("a[href*=" + "home" + "]")
+  //       ?.classList.remove("active-link");
+  //     navRef?.current
+  //       ?.querySelector("a[href*=" + "projects" + "]")
+  //       ?.classList.remove("active-link");
+  //     navRef?.current
+  //       ?.querySelector("a[href*=" + "contacts" + "]")
+  //       ?.classList.remove("active-link");
+  //   }
+  //   if (props.activePage === "projects") {
+  //     navRef?.current
+  //       ?.querySelector("a[href*=" + "projects" + "]")
+  //       ?.classList.add("active-link");
+  //     navRef?.current
+  //       ?.querySelector("a[href*=" + "aboutus" + "]")
+  //       ?.classList.remove("active-link");
+  //     navRef?.current
+  //       ?.querySelector("a[href*=" + "home" + "]")
+  //       ?.classList.remove("active-link");
+  //     navRef?.current
+  //       ?.querySelector("a[href*=" + "contacts" + "]")
+  //       ?.classList.remove("active-link");
+  //   }
+  //   if (props.activePage === "contacts") {
+  //     navRef?.current
+  //       ?.querySelector("a[href*=" + "contacts" + "]")
+  //       ?.classList.add("active-link");
+  //     navRef?.current
+  //       ?.querySelector("a[href*=" + "aboutus" + "]")
+  //       ?.classList.remove("active-link");
+  //     navRef?.current
+  //       ?.querySelector("a[href*=" + "projects" + "]")
+  //       ?.classList.remove("active-link");
+  //     navRef?.current
+  //       ?.querySelector("a[href*=" + "home" + "]")
+  //       ?.classList.remove("active-link");
+  //   }
+  // };
 
   useEffect(() => {
-    getActivePageScrolled();
-  }, [props.activePage]);
+    getActiveScroll();
+  }, [currentScroll]);
 
   return (
     <StyledHeader ref={headerRef}>
@@ -123,7 +128,11 @@ const Header = (props: { activePage: PagesType }) => {
           <NavList>
             {NavItems?.map((item, index) => (
               <NavItem key={index}>
-                <NavLink href={item?.path} className="active-link">
+                <NavLink
+                  href={item?.path}
+                  // className="active-link"
+                  onClick={() => props.onChangeActivePage(item?.path)}
+                >
                   {item?.icon}
                   <span>{item?.title}</span>
                 </NavLink>

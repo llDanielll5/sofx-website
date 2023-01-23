@@ -71,7 +71,7 @@ const animateText = keyframes`
 `;
 const animateTextMobile = keyframes`
 0% {
-      right: -100%;
+      right: -10%;
     }
     15%{
         right:2%;
@@ -86,7 +86,7 @@ const animateTextMobile = keyframes`
         right: 2%
     }
     100%{
-      right: -100%
+      right: -10%
     }
 `;
 

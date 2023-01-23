@@ -27,3 +27,10 @@ export const LinkStyled = styled(Link)`
     width: 100%;
   }
 `;
+
+export const MobileAppsView = styled.div`
+  display: none;
+  @media screen and (max-width: 400px) {
+    display: block;
+  }
+`;

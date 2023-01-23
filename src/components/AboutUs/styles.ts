@@ -12,9 +12,9 @@ import {
 } from "../../constants/cssVariables";
 
 export const StyledAbout = styled.div`
-  padding: 4.5rem 0 2rem;
+  padding: 4.5rem 0 0;
   @media screen and (max-width: 1023px) {
-    padding: 4.5rem 1rem 2rem 0;
+    padding: 4.5rem 1rem 0 0;
   }
 `;
 
@@ -84,7 +84,7 @@ export const AboutAccordionItem = styled.div`
   border: 2px solid ${COLORS.borderColor};
   border-radius: 0.5rem;
   padding: 2rem 0.75rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
   transition: 1s;
   box-shadow: ${({ dynamicHeight }) =>
     dynamicHeight === 0 ? undefined : "0 12px 50px hsla(228, 66%, 45%, 0.1)"};

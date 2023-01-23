@@ -11,7 +11,12 @@ import {
   StyledAbout,
 } from "../AboutUs/styles";
 import { appsMobile, websites } from "./data";
-import { LinkStyled, ProjectContainer, ProjectsRow } from "./styles";
+import {
+  LinkStyled,
+  MobileAppsView,
+  ProjectContainer,
+  ProjectsRow,
+} from "./styles";
 import TextFadeIn from "../TextFadeIn";
 import { COLORS } from "../../constants/cssVariables";
 
@@ -54,24 +59,24 @@ const Projects = () => {
               ))}
             </ProjectsRow>
 
-            {/* <h2 style={{ marginTop: "12px", textAlign: "center" }}>
-              Aplicativos Completos!
-            </h2>
-            <Paragraph style={{ textAlign: "center" }}>
-              Clique para baixar o app!
-            </Paragraph>
+            <MobileAppsView>
+              <h2 style={{ marginTop: "12px", textAlign: "center" }}>Mobile</h2>
+              <Paragraph style={{ textAlign: "center" }}>
+                Clique para baixar o app!
+              </Paragraph>
 
-            <ProjectsRow>
-              {appsMobile.map((item, index) => (
-                <ProjectsItems
-                  key={index}
-                  image={item.image}
-                  title={item.title}
-                  label={item.label}
-                  link={item.link}
-                />
-              ))}
-            </ProjectsRow> */}
+              <ProjectsRow>
+                {appsMobile.map((item, index) => (
+                  <ProjectsItems
+                    key={index}
+                    image={item.image}
+                    title={item.title}
+                    label={item.label}
+                    link={item.link}
+                  />
+                ))}
+              </ProjectsRow>
+            </MobileAppsView>
           </AboutData>
         </AboutContent>
       </AboutContainer>

@@ -14,13 +14,17 @@ import Header from "../Header";
 import AboutUs from "../AboutUs";
 import Projects from "../Projects";
 import ReactFullpage from "@fullpage/react-fullpage";
+import { useRouter } from "next/router";
+import Contact from "../Contact";
+import Footer from "../Footer";
 
-export type PagesType = "home" | "aboutus" | "projects";
+export type PagesType = "home" | "aboutus" | "projects" | "contacts";
 
 const Main = () => {
+  const route = useRouter();
   const currentScroll = useGetScrollPosition();
   const pages = ["home", "aboutus", "projects"];
-  const [activePage, setActivePage] = useState<PagesType>("home");
+  var [activePage, setActivePage] = useState<PagesType>("home");
   const sectionColors = ["rgba(0,0,0,0.6)", "white", "white", "white"];
   const msg = `Olá!! 
   Gostaria de receber um orçamento para a criação de uma aplicação para minha empresa!
@@ -31,19 +35,22 @@ const Main = () => {
 
   const scrollUp = useCallback(() => {
     const scroll_up = document.getElementById("scroll_up");
-    if (activePage === "home") {
+    if (currentScroll < 100) {
       scroll_up?.classList.add("show-scroll");
     } else scroll_up?.classList.remove("show-scroll");
-  }, [activePage]);
+  }, [currentScroll]);
 
   useEffect(() => {
     scrollUp();
-  }, [currentScroll, scrollUp]);
+  }, [scrollUp]);
 
   return (
     <StyledMain>
-      <Header activePage={activePage} />
-      <ReactFullpage
+      <Header
+        activePage={activePage}
+        onChangeActivePage={(e) => setActivePage(e)}
+      />
+      {/* <ReactFullpage
         anchors={pages}
         navigation
         navigationTooltips={pages}
@@ -58,42 +65,46 @@ const Main = () => {
             setActivePage("aboutus");
           } else if (destination.anchor === "projects") {
             setActivePage("projects");
-          } else if (destination.anchor === "contacts") {
-            setActivePage("contacts");
           }
         }}
         render={({ state, fullpageApi }) => {
           return (
             <ReactFullpage.Wrapper>
-              <div id="home" className="section">
-                <HomeContainer>
-                  <HomeData />
-                  <HomeInnerContainer />
-                  <HomeTitle>Soluções Digitais DGS</HomeTitle>
-                  <HomeDescription size="h2Font">
-                    Nunca foi tão prático ter em suas mãos a solução digital que
-                    você precisava. <br />
-                    Alavanque vendas e organize sua empresa com nossos Softwares
-                    de ponta.
-                  </HomeDescription>
-                  <ArrowDown onClick={() => fullpageApi.moveSectionDown()} />
-                </HomeContainer>
-              </div>
-
-              <div className="section" id="aboutus">
-                <AboutUs />
-              </div>
-              <div className="section" id="projects">
-                <Projects />
-              </div>
-              {/* <div className="section" id="contacts">
+              
+               <div className="section" id="contacts">
                 <Contact />
                 <Footer />
-              </div> */}
+              </div> 
             </ReactFullpage.Wrapper>
           );
         }}
-      />
+      /> 
+      */}
+      <div id="home" className="section">
+        <HomeContainer>
+          <HomeData />
+          <HomeInnerContainer />
+          <HomeTitle>Soluções Digitais DGS</HomeTitle>
+          <HomeDescription size="h2Font">
+            Nunca foi tão prático ter em suas mãos a solução digital que você
+            precisava. <br />
+            Alavanque vendas e organize sua empresa com nossos Softwares de
+            ponta.
+          </HomeDescription>
+          <ArrowDown onClick={() => route.push("#aboutus")} />
+        </HomeContainer>
+      </div>
+
+      <div className="section" id="aboutus">
+        <AboutUs />
+      </div>
+      <div className="section" id="projects">
+        <Projects />
+      </div>
+      <div className="section" id="contacts">
+        <Contact />
+        <Footer />
+      </div>
       <a
         href={zapHref}
         className="scrollup"

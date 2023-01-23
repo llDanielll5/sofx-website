@@ -29,10 +29,10 @@ export const FooterLogo = styled.a`
 export const FooterSection = styled.footer`
   padding: 0 1.5rem 0 1.5rem;
   background-color: #ccc;
-  margin-top: 4rem;
-  height: 40vh;
+  margin-top: 7rem;
+  height: 48vh;
   @media screen and (max-width: 1023px) {
-    margin-top: 1.2rem;
+    margin-top: 2.5rem;
   }
 `;
 

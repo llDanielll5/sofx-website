@@ -11,7 +11,6 @@ import {
   HomeSection,
   HomeTitle,
 } from "./styles";
-import BannerImg from "../../../public/images/banner.jpg";
 import { COLORS } from "../../constants/cssVariables";
 
 const Home = () => {
