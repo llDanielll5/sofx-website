@@ -48,7 +48,7 @@ export const footerFollowUs = [
     icon: <FacebookIcon />,
   },
   {
-    href: "https://www.instagram.com/dgssoftwares/",
+    href: "https://www.instagram.com/sofxsolucoes/",
     icon: <InstagramIcon />,
   },
 ];

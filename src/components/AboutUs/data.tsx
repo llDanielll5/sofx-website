@@ -4,21 +4,21 @@ import { MedalIcon, ShieldIcon, StarIcon } from "./styles";
 
 export const aboutData: AboutItems[] = [
   {
-    title: "Softwares Robustos e seguros!",
+    title: "Praticidade e agilidade para sua empresa!",
     description:
-      "Nossas aplicações são criadas pensando sempre na segurança dos dados do cliente, e sempre com a melhor performance possível, para atender melhor toda a sua empresa!",
+      "Softwares pensados para a sua necessidade! Garantindo mais celeridade no seu dia-a-dia e mais controle geral de sua empresa!",
     icon: <ShieldIcon className="accordion-icon" />,
   },
   {
     title: "Capacitação completa em Projetos!",
     description:
-      "Criamos a sua solução do começo ao fim, desde a preparação UI e UX, até a finalização da entrega de todo seu software necessário.",
+      "Criamos a sua solução do começo ao fim, utilizando das melhores práticas e métodos ágeis, para trazer o resultado no tempo desejado.",
     icon: <StarIcon className="accordion-icon" />,
   },
   {
     title: "Garantia e Manutenção!",
     description:
-      "Todos nossos serviços possuem garantia de qualidade e manutenção por períodos longínquos, dependendo da necessidade do cliente.",
+      "Todos nossos serviços possuem garantia de qualidade e manutenção.",
     icon: <MedalIcon className="accordion-icon" />,
   },
 ];

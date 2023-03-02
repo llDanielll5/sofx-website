@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import { GiLaptop } from "react-icons/gi";
 import {
@@ -21,7 +22,7 @@ const Footer = () => {
       <div className={styles.footer__container}>
         <div className={styles.footerTextContainer}>
           <FooterLogo href="#">
-            DGS Softwares <GiLaptop />
+            <img src="/images/sofxLogo.png" alt="sofxLogo" className="logo" />
           </FooterLogo>
         </div>
 
@@ -66,7 +67,7 @@ const Footer = () => {
 
       <div className={styles.footer_info_container}>
         <FooterCopy>
-          &#169; DGS Softwares 2023. Todos direitos reservados.
+          SOFX Soluções Digitais&#169; Todos direitos reservados.
         </FooterCopy>
       </div>
     </FooterSection>

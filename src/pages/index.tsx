@@ -1,12 +1,11 @@
 import Head from "next/head";
-import Header from "../components/Header";
 import Main from "../components/Main";
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title>DGS Softwares e Soluções</title>
+        <title>SOFX Soluções Digitais</title>
         <meta
           name="description"
           content="A tecnologia que você precisa para sua empresa!"

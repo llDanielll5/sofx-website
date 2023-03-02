@@ -11,11 +11,11 @@ export const NavItems = [
     icon: <AboutIcon />,
     path: "#aboutus",
   },
-  {
-    title: "Projetos Modelos",
-    icon: <ProjectsIcon />,
-    path: "#projects",
-  },
+  // {
+  //   title: "Projetos Modelos",
+  //   icon: <ProjectsIcon />,
+  //   path: "#projects",
+  // },
   {
     title: "Contatos",
     icon: <ContactIcon />,

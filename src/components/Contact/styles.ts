@@ -5,19 +5,24 @@ import {
   TYPOGRAPHY,
   TYPOGRAPHY1024,
 } from "../../constants/cssVariables";
-import { Container, Section } from "../Reusables/styles";
+import { Container } from "../Reusables/styles";
 import { BsWhatsapp } from "react-icons/bs";
 
 export const ContactSection = styled.div`
-  padding: 6rem 0 0;
-  height: 50vh;
+  padding: 4rem 0;
+  background-color: ${COLORS.firstColorLighten};
   @media screen and (max-width: 1023px) {
-    padding: 4.5rem 1rem 0 0;
+    padding: 4rem 0;
   }
 `;
 
 export const ContactContainer = styled(Container)`
   row-gap: 0;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  align-items: center;
+  justify-content: center;
   @media screen and (max-width: 1024px) {
     display: grid;
   }
@@ -49,23 +54,31 @@ export const TitleContact = styled.h2`
 `;
 
 export const ContactDescription = styled.p`
-  font-size: ${TYPOGRAPHY.h2Font};
-  margin-bottom: 2.5rem;
+  font-size: ${TYPOGRAPHY.h1Font};
   text-align: center;
+  margin: 3rem auto;
+  width: 50%;
+  opacity: 0;
+  transition: 1.8s;
   @media screen and (max-width: 1024px) {
     margin-bottom: 0;
+    width: 90%;
     margin-top: 1rem;
-    font-size: ${TYPOGRAPHY1024.normal};
+    font-size: ${TYPOGRAPHY1024.h2Font};
   }
 `;
 
-export const ContactButton = styled.button`
+export const ContactButton = styled.a`
   padding: 16px 32px;
   color: ${COLORS.firstColor};
   border-radius: 0.25rem;
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 4px 5px hsla(228, 66%, 25%, 0.25);
   font-weight: 600;
-  background-color: ${COLORS.firstColorLighten};
+  background-color: white;
   font-size: ${TYPOGRAPHY.normal};
+  margin: 3rem 10px;
   cursor: pointer;
   transition: 0.3s;
   :hover {

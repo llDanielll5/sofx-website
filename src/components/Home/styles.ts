@@ -22,6 +22,7 @@ export const HomeSection = styled.div`
 export const HomeContainer = styled(Container)`
   display: grid;
   padding-top: 7rem;
+  overflow-x: hidden;
   @media screen and (max-width: 1023px) {
     padding-top: 7rem;
   }
@@ -51,7 +52,7 @@ export const HomeInnerContainer = styled.div`
 
 const animateText = keyframes`
 0% {
-      right: -50%;
+      right: 0%;
     }
     15%{
         right: 10%;
@@ -63,15 +64,15 @@ const animateText = keyframes`
         right: 10%
     }
     90%{
-        right: -15%
+        right: 5%
     }
     100%{
-      right: -30%
+      right: 2%
     }
 `;
 const animateTextMobile = keyframes`
 0% {
-      right: -10%;
+      right: 0%;
     }
     15%{
         right:2%;
@@ -86,7 +87,7 @@ const animateTextMobile = keyframes`
         right: 2%
     }
     100%{
-      right: -10%
+      right: 0%
     }
 `;
 
@@ -96,12 +97,15 @@ export const HomeTitle = styled.h1`
   padding-top: 6rem;
   z-index: 3;
   position: absolute;
-  right: -20%;
+  text-align: center;
+  right: 0%;
   animation-name: ${animateText};
   animation-duration: 10s;
   animation-iteration-count: infinite;
   @media screen and (max-width: 960px) {
     font-size: 2rem;
+    position: relative;
+    text-align: center;
     animation-name: ${animateTextMobile};
     animation-duration: 10s;
     animation-iteration-count: infinite;
@@ -111,10 +115,10 @@ export const HomeTitle = styled.h1`
 export const HomeDescription = styled(Paragraph)`
   font-size: ${TYPOGRAPHY.h2Font};
   color: white;
-  padding-top: 16rem;
+  padding-top: 20rem;
   z-index: 3;
   position: absolute;
-  right: -20%;
+  right: 0%;
   animation-name: ${animateText};
   animation-duration: 10s;
   animation-iteration-count: infinite;
@@ -234,6 +238,18 @@ export const SearchButton = styled(Button)`
   }
 `;
 
+const animateArrow = keyframes`
+  0%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(5px);
+  }
+  100%{
+    transform: translateY(0);
+  }
+`;
+
 export const ArrowDown = styled(AiOutlineArrowDown)`
   position: absolute;
   left: 50%;
@@ -242,6 +258,9 @@ export const ArrowDown = styled(AiOutlineArrowDown)`
   color: white;
   z-index: 2;
   font-size: 3rem;
+  animation-name: ${animateArrow};
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
   cursor: pointer;
   @media screen and (max-width: 1023px) {
     bottom: 7rem;

@@ -27,12 +27,10 @@ export const FooterLogo = styled.a`
 `;
 
 export const FooterSection = styled.footer`
-  padding: 0 1.5rem 0 1.5rem;
-  background-color: #ccc;
-  margin-top: 7rem;
-  height: 48vh;
+  padding: 1rem 1.5rem 0 1.5rem;
+  background-color: white;
   @media screen and (max-width: 1023px) {
-    margin-top: 2.5rem;
+    margin-top: 1rem;
   }
 `;
 
@@ -48,14 +46,16 @@ export const FooterTitle = styled.h3`
 export const FooterSocialLink = styled.a`
   font-size: 1.25rem;
   color: ${COLORS.textColor};
-  transition: 0.3s;
+  transition: 0.1s;
   :hover {
     color: ${COLORS.titleColor};
+    font-size: 2.5rem;
   }
 `;
 
 export const FooterCopy = styled.span`
   text-align: center;
+  margin-top: 12px;
   width: 100%;
   font-size: ${TYPOGRAPHY.small};
   font-weight: ${WEIGHTFONT.medium};

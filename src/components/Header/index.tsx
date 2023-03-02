@@ -54,65 +54,6 @@ const Header = (props: HeaderProps) => {
     scrollActive();
   }, []);
 
-  // const getActivePageScrolled = () => {
-  //   if (props.activePage === "home") {
-  //     navRef?.current
-  //       ?.querySelector("a[href*=" + "home" + "]")
-  //       ?.classList.add("active-link");
-  //     navRef?.current
-  //       ?.querySelector("a[href*=" + "aboutus" + "]")
-  //       ?.classList.remove("active-link");
-  //     navRef?.current
-  //       ?.querySelector("a[href*=" + "projects" + "]")
-  //       ?.classList.remove("active-link");
-  //     navRef?.current
-  //       ?.querySelector("a[href*=" + "contacts" + "]")
-  //       ?.classList.remove("active-link");
-  //   }
-  //   if (props.activePage === "aboutus") {
-  //     navRef?.current
-  //       ?.querySelector("a[href*=" + "aboutus" + "]")
-  //       ?.classList.add("active-link");
-  //     navRef?.current
-  //       ?.querySelector("a[href*=" + "home" + "]")
-  //       ?.classList.remove("active-link");
-  //     navRef?.current
-  //       ?.querySelector("a[href*=" + "projects" + "]")
-  //       ?.classList.remove("active-link");
-  //     navRef?.current
-  //       ?.querySelector("a[href*=" + "contacts" + "]")
-  //       ?.classList.remove("active-link");
-  //   }
-  //   if (props.activePage === "projects") {
-  //     navRef?.current
-  //       ?.querySelector("a[href*=" + "projects" + "]")
-  //       ?.classList.add("active-link");
-  //     navRef?.current
-  //       ?.querySelector("a[href*=" + "aboutus" + "]")
-  //       ?.classList.remove("active-link");
-  //     navRef?.current
-  //       ?.querySelector("a[href*=" + "home" + "]")
-  //       ?.classList.remove("active-link");
-  //     navRef?.current
-  //       ?.querySelector("a[href*=" + "contacts" + "]")
-  //       ?.classList.remove("active-link");
-  //   }
-  //   if (props.activePage === "contacts") {
-  //     navRef?.current
-  //       ?.querySelector("a[href*=" + "contacts" + "]")
-  //       ?.classList.add("active-link");
-  //     navRef?.current
-  //       ?.querySelector("a[href*=" + "aboutus" + "]")
-  //       ?.classList.remove("active-link");
-  //     navRef?.current
-  //       ?.querySelector("a[href*=" + "projects" + "]")
-  //       ?.classList.remove("active-link");
-  //     navRef?.current
-  //       ?.querySelector("a[href*=" + "home" + "]")
-  //       ?.classList.remove("active-link");
-  //   }
-  // };
-
   useEffect(() => {
     getActiveScroll();
   }, [currentScroll]);
@@ -121,7 +62,7 @@ const Header = (props: HeaderProps) => {
     <StyledHeader ref={headerRef}>
       <StyledNav>
         <NavLogo href="/" id="NavLogo">
-          DGS Softwares <GiLaptop />
+          SOFX Soluções Digitais <GiLaptop />
         </NavLogo>
 
         <NavMenu ref={navRef}>
@@ -130,7 +71,6 @@ const Header = (props: HeaderProps) => {
               <NavItem key={index}>
                 <NavLink
                   href={item?.path}
-                  // className="active-link"
                   onClick={() => props.onChangeActivePage(item?.path)}
                 >
                   {item?.icon}

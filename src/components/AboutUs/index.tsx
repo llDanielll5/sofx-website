@@ -13,9 +13,13 @@ import {
   AboutContainer,
   AboutContent,
   ArrowDownIcon,
+  FadeInContainerText,
+  PortfolioAnchor,
   StyledAbout,
 } from "./styles";
-import TextFadeIn from "../TextFadeIn";
+import TextFadeIn, { FadeInText } from "../TextFadeIn";
+import Button from "../Button";
+import { useGetScrollPosition } from "../../hooks/useGetScrollPosition";
 
 export interface AboutItems {
   icon: any;
@@ -25,10 +29,16 @@ export interface AboutItems {
 }
 
 const AboutUs = () => {
+  const currentScroll = useGetScrollPosition();
+  const textFadeRef = useRef<HTMLDivElement>(null);
+  const aboutButtonRef = useRef<HTMLElement>(null);
   const accordionItemRef = useRef<HTMLDivElement>(null);
   const aboutContentRef = useRef<HTMLDivElement>(null);
   const accordionHeaderRef = useRef<HTMLDivElement>(null);
   const [aboutItemsHeight, setAboutItemsHeight] = useState<any[]>([0, 0, 0]);
+  const textStyleRef = textFadeRef?.current?.style;
+  const accordionStyle = accordionItemRef?.current?.style;
+  const buttonStyleRef = aboutButtonRef?.current?.style;
 
   const toggleAboutItem = (index: number) => {
     if (aboutItemsHeight[index] === 0) {
@@ -50,6 +60,22 @@ const AboutUs = () => {
     }
   };
 
+  const fadeInPage = () => {
+    textStyleRef?.setProperty("left", "80%");
+    accordionStyle?.setProperty("opacity", "1");
+    buttonStyleRef?.setProperty("opacity", "1");
+  };
+  const fadeOutPage = () => {
+    textStyleRef?.setProperty("left", "0");
+    accordionStyle?.setProperty("opacity", "0");
+    buttonStyleRef?.setProperty("opacity", "0");
+  };
+
+  useEffect(() => {
+    if (currentScroll > 200) fadeInPage();
+    else fadeOutPage();
+  }, [currentScroll]);
+
   const AboutItems = (props: AboutItems) => (
     <AboutAccordionItem
       id="items"
@@ -67,11 +93,7 @@ const AboutUs = () => {
         </AboutAccordionArrow>
       </AboutAccordionHeader>
 
-      <AboutAccordionContent
-        ref={aboutContentRef}
-        id="content"
-        dynamicHeight={aboutItemsHeight[props.index]}
-      >
+      <AboutAccordionContent dynamicHeight={aboutItemsHeight[props.index]}>
         <AboutAccordionDescription>
           {props.description}
         </AboutAccordionDescription>
@@ -79,25 +101,36 @@ const AboutUs = () => {
     </AboutAccordionItem>
   );
   return (
-    <StyledAbout>
+    <StyledAbout id={"aboutus"}>
       <AboutContainer>
         <AboutContent>
-          <TextFadeIn content="Sobre Nós" backColor={"white"} />
+          <FadeInContainerText>
+            <TextFadeIn content="Sobre Nós" backColor={"white"} />
+            <FadeInText ref={textFadeRef} backColor={"white"} />
+          </FadeInContainerText>
 
-          <Paragraph id="valueDescription">Conheça mais sobre nós!</Paragraph>
-
-          <AboutAccordion ref={accordionItemRef}>
-            {aboutData?.map((item, i) => (
-              <AboutItems
-                key={i}
-                index={i}
-                description={item?.description}
-                title={item?.title}
-                icon={item?.icon}
-              />
-            ))}
-          </AboutAccordion>
+          <AboutAccordionContent ref={accordionItemRef} id="content">
+            <AboutAccordionDescription>
+              Os serviços digitais como sites, aplicativos e sistemas são
+              essenciais para empresas que desejam expandir sua presença online
+              e melhorar sua eficiência operacional. A automação desses
+              processos oferece inúmeras vantagens, como a redução de erros
+              humanos, aumento da produtividade, economia de tempo e redução de
+              custos. <br />
+              <br /> Além disso, a presença digital é uma necessidade básica nos
+              dias de hoje. Empresas que não investem em serviços digitais estão
+              perdendo oportunidades valiosas de se conectar com seus clientes e
+              aumentar sua base de clientes. <br />
+              <br />
+              Pensando nisso nós procuramos oferecer o melhor serviço e
+              atendimento, para oferecer o melhor sistema e adequação digital
+              para sua empresa.
+            </AboutAccordionDescription>
+          </AboutAccordionContent>
         </AboutContent>
+        <PortfolioAnchor href="/projects" ref={aboutButtonRef}>
+          Conheça nosso Portfólio
+        </PortfolioAnchor>
       </AboutContainer>
     </StyledAbout>
   );

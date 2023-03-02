@@ -12,9 +12,10 @@ import {
 } from "../../constants/cssVariables";
 
 export const StyledAbout = styled.div`
-  padding: 4.5rem 0 0;
+  padding: 4.5rem 0;
+  position: relative;
   @media screen and (max-width: 1023px) {
-    padding: 4.5rem 1rem 0 0;
+    padding: 4rem 0;
   }
 `;
 
@@ -56,9 +57,10 @@ export const AboutImg = styled.div`
 `;
 
 export const AboutContent = styled.div`
+  overflow-x: hidden;
   #valueDescription {
     font-size: ${TYPOGRAPHY.h2Font};
-    margin-bottom: 2rem;
+    margin: 0 auto 2rem auto;
     color: ${COLORS.firstColor};
     text-align: center;
   }
@@ -66,6 +68,20 @@ export const AboutContent = styled.div`
   @media screen and (max-width: 1024px) {
     font-size: ${TYPOGRAPHY1024.h2Font};
   }
+  @media screen and (max-width: 500px) {
+    margin: 0 auto 1rem auto;
+    font-size: ${TYPOGRAPHY1024.smaller};
+    width: 100%;
+  }
+`;
+
+export const FadeInContainerText = styled.div`
+  width: 100vw;
+  height: auto;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 `;
 
 export const AboutData = styled.div``;
@@ -76,7 +92,8 @@ export const H2SectionTitle = styled.h2`
 
 export const AboutAccordion = styled.div`
   display: grid;
-  /* row-gap: 1.5rem; */
+  opacity: 0;
+  transition: 1.8s;
 `;
 
 export const AboutAccordionItem = styled.div`
@@ -107,10 +124,10 @@ export const AboutAccordionHeader = styled.header`
 `;
 
 export const AboutAccordionTitle = styled.h3`
-  font-size: ${TYPOGRAPHY.small};
+  font-size: ${TYPOGRAPHY.h3Font};
 
   @media screen and (max-width: 1024px) {
-    font-size: ${TYPOGRAPHY1024.small};
+    font-size: ${TYPOGRAPHY1024.h3Font};
   }
 `;
 
@@ -127,18 +144,53 @@ export const AboutAccordionArrow = styled.div`
 
 export const AboutAccordionContent = styled.div`
   overflow: hidden;
-  height: ${({ dynamicHeight }) => dynamicHeight ?? 0};
-  transition: all 0.75s ease;
+  height: auto;
+  opacity: 0;
+  transition: 1.8s;
   &.accordion-open {
     background-color: red;
   }
 `;
 
 export const AboutAccordionDescription = styled.p`
-  font-size: ${TYPOGRAPHY.smaller};
+  font-size: ${TYPOGRAPHY.h3Font};
+  margin: 0 auto;
+  width: 70%;
+  text-align: center;
   padding: 1.25rem 2.5rem 0 2.75rem;
   @media screen and (max-width: 1024px) {
+    padding: 1rem 2.5rem 0 2rem;
+    font-size: ${TYPOGRAPHY1024.normal};
+    width: 100%;
+  }
+  @media screen and (max-width: 500px) {
+    padding: 1rem 2.5rem 0 2rem;
+    font-size: ${TYPOGRAPHY1024.small};
+    width: 100%;
+  }
+`;
+
+export const PortfolioAnchor = styled.a`
+  opacity: 0;
+  font-weight: 600;
+  transition: 1.8s;
+  font-size: ${TYPOGRAPHY.normal};
+  padding: 1.25rem 2.5rem 0 2.75rem;
+  text-align: center;
+  margin: 30px auto;
+  background-color: ${COLORS.firstColorAlt};
+  border-radius: 20px;
+  color: white;
+  width: 50%;
+  box-shadow: 0 12px 50px hsla(228, 66%, 45%, 0.1);
+  padding-bottom: 18px;
+  @media screen and (max-width: 1024px) {
+    font-size: ${TYPOGRAPHY1024.normal};
+    width: 80%;
+  }
+  @media screen and (max-width: 500px) {
     font-size: ${TYPOGRAPHY1024.smaller};
+    width: 100%;
   }
 `;
 

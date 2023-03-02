@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { FaChevronCircleUp } from "react-icons/fa";
 import { AiOutlineWhatsApp } from "react-icons/ai";
 
 export const StyledMain = styled.div`
@@ -14,6 +13,6 @@ export const StyledMain = styled.div`
 `;
 
 export const ScrollUpIcon = styled(AiOutlineWhatsApp)`
-  width: 40px;
-  height: 40px;
+  width: 55px;
+  height: 55px;
 `;

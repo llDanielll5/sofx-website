@@ -62,6 +62,7 @@
   }
   .contact__content {
     padding-bottom: 0;
+    overflow-x: hidden;
   }
   .contact__data {
     margin-top: 1rem;

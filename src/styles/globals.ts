@@ -16,6 +16,7 @@ export const GlobalStyles = createGlobalStyle`
     }
     html {
         scroll-behavior: smooth;
+        overflow-x: hidden;
     }
 
     body {
@@ -75,10 +76,9 @@ export const GlobalStyles = createGlobalStyle`
         background-color: white;
         box-shadow: 0 8px 12px hsla(228, 66%, 45%,.1);
         display: inline-flex;
-        padding: .35rem;
+        padding: .7rem;
         border-radius: 50%;
         color: hsl(228,57%,28%);
-        font-size: 1.25rem;
         z-index: 10;
         transition: .3s;
      }
