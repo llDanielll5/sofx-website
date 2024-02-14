@@ -1,13 +1,34 @@
-import type { AppProps } from "next/app";
-import { GlobalStyles } from "../styles/globals";
-import { GoogleFonts } from "next-google-fonts";
+import * as React from "react";
+import { ThemeProvider } from "@mui/material/styles";
+import { CacheProvider } from "@emotion/react";
+import { RecoilRoot } from "recoil";
+import { createTheme } from "../utils/theme";
+import { useNProgress } from "../hooks/useNProgress";
+import Head from "next/head";
+import CssBaseline from "@mui/material/CssBaseline";
+import createEmotionCache from "../utils/services/createEmotionCache";
+import "../styles/globals.css";
 
-export default function App({ Component, pageProps }: AppProps) {
+const clientSideEmotionCache = createEmotionCache();
+
+export default function App(props: any) {
+  const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
+
+  useNProgress();
+
+  const theme = createTheme();
+
   return (
-    <>
-      <GlobalStyles />
-      <GoogleFonts href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" />
-      <Component {...pageProps} />
-    </>
+    <CacheProvider value={emotionCache}>
+      <Head>
+        <meta name="viewport" content="initial-scale=1, width=device-width" />
+      </Head>
+      <RecoilRoot>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <Component {...pageProps} />
+        </ThemeProvider>
+      </RecoilRoot>
+    </CacheProvider>
   );
 }
