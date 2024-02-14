@@ -55,6 +55,10 @@ const CardsContainer = styled(Box)`
   grid-row-gap: 1.5rem;
   padding: 3rem 0;
   @media screen and (max-width: 760px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media screen and (max-width: 550px) {
+    grid-template-columns: repeat(1, 1fr);
   }
 `;
 

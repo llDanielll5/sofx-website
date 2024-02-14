@@ -5,6 +5,9 @@ import { allServices } from "../../../utils/data/landing-page";
 const Services = () => {
   return (
     <Container>
+      <Typography variant="h5" py={2}>
+        Nossos Serviços
+      </Typography>
       <CardsContainer>
         {allServices.map((v, i) => (
           <CardSingle key={i}>
