@@ -4,7 +4,7 @@ import { cardAboutUs } from "../../../utils/data/landing-page";
 
 const AboutUs = () => {
   return (
-    <Container>
+    <Container id={"about-us"}>
       <Typography variant="h4">Sobre Nós</Typography>
 
       <CardsContainer>

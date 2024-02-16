@@ -12,7 +12,7 @@ const Contact = () => {
   const openWhatsapp = () => window.open(zapHref, "_blank");
 
   return (
-    <Container>
+    <Container id={"contact"}>
       <Typography variant="h5">Entre em Contato</Typography>
       <Typography variant="body1">
         Entre em contato e diga sobre sua ideia e faça seu orçamento!

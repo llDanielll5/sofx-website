@@ -10,6 +10,12 @@ export default function Document() {
           type="text/css"
           href="https://unpkg.com/fullpage.js@3.0.1/dist/fullpage.min.css"
         />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet"
+        />
       </Head>
       <body>
         <Main />

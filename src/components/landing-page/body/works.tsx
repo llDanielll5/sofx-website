@@ -6,7 +6,7 @@ const Works: React.FC = () => {
   const openHref = (href: string) => window.open(href, "_blank");
 
   return (
-    <Container>
+    <Container id={"works"}>
       <Typography variant="h5">Nossos Trabalhos</Typography>
 
       <Box position={"relative"} py={2}>

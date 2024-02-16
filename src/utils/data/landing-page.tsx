@@ -8,10 +8,10 @@ import AutoFixHighIcon from "@mui/icons-material/AutoFixHigh";
 import SmartToyIcon from "@mui/icons-material/SmartToy";
 
 export const headerMenu = [
-  { href: "#", title: "Sobre Nós" },
-  { href: "#", title: "Nossos Serviços" },
-  { href: "#", title: "Trabalhos" },
-  { href: "#", title: "Contato" },
+  { href: "/#about-us", title: "Sobre Nós" },
+  { href: "/#services", title: "Nossos Serviços" },
+  { href: "/#works", title: "Trabalhos" },
+  { href: "/#contact", title: "Contato" },
 ];
 
 export const cardAboutUs = [
