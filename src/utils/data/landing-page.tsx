@@ -38,7 +38,7 @@ export const allWorks = [
     img: "images/portfolio/cemic.png",
   },
   {
-    href: "https://drreparos-web.vercel.app",
+    href: "https://doutorreparosoficial.com.br",
     title: "Dr Reparos | Website",
     img: "images/portfolio/drreparos.png",
   },
