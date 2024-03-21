@@ -43,9 +43,9 @@ export const allWorks = [
     img: "images/portfolio/drreparos.png",
   },
   {
-    href: "https://bellamoveis.vercel.app/",
-    title: "Bella Móveis | Website",
-    img: "images/portfolio/bella-moveis.png",
+    href: "https://sobmedidamoveisplanejados.com.br/",
+    title: "Sob Medida | Website",
+    img: "images/portfolio/sobmedida.png",
   },
   {
     href: "https://bijuteria.vercel.app",
