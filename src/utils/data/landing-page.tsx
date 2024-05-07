@@ -38,6 +38,11 @@ export const allWorks = [
     img: "images/portfolio/cemic.png",
   },
   {
+    href: "https://preeset.com",
+    title: "Preeset | Website/Sistema",
+    img: "images/portfolio/preeset.png",
+  },
+  {
     href: "https://doutorreparosoficial.com.br",
     title: "Dr Reparos | Website",
     img: "images/portfolio/drreparos.png",

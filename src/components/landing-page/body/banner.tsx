@@ -50,7 +50,7 @@ const Banner = () => {
             startIcon={<WhatsAppIcon />}
             onClick={openWhatsapp}
           >
-            Saber Mais
+            Fale Conosco
           </StyledButton>
         </motion.div>
       </TextContainer>
