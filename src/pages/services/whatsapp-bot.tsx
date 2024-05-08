@@ -142,19 +142,19 @@ const WhatsappBotPage = () => {
       </TitleContainer>
 
       <AdvantagesSection>
-        {advantagesMock(
-          width! > 900 ? "120px" : width! > 720 ? "80px" : "55px"
-        ).map((v, i) => (
-          <CardAdvantages key={i}>
-            {v.icon}
-            <Typography variant="h6" textAlign="center">
-              + {v.title}
-            </Typography>
-            <Typography variant="subtitle2" textAlign="center">
-              {v.description}
-            </Typography>
-          </CardAdvantages>
-        ))}
+        {advantagesMock(width! > 900 ? "240" : width! > 720 ? "120" : "80").map(
+          (v, i) => (
+            <CardAdvantages key={i}>
+              {v.icon}
+              <Typography variant="h6" textAlign="center">
+                + {v.title}
+              </Typography>
+              <Typography variant="subtitle2" textAlign="center">
+                {v.description}
+              </Typography>
+            </CardAdvantages>
+          )
+        )}
       </AdvantagesSection>
 
       <PackagesSection></PackagesSection>
@@ -174,16 +174,17 @@ const WhatsappBotPage = () => {
       <PricesSection></PricesSection>
 
       <LastCallSection>
-        <StrokeText variant="h3">
+        <StrokeText variant="h3" className="text-effect-1">
           Fale agora com nossa equipe e saiba como automatizar sua empresa hoje!
         </StrokeText>
 
         <CallButton
           variant="contained"
           fullWidth
-          color="inherit"
+          color="primary"
           endIcon={<WhatsAppIcon fontSize="large" />}
-          sx={{ color: COLORS.darkPrimary }}
+          //   sx={{ color: COLORS.darkPrimary }}
+          onClick={openWhatsapp}
         >
           Adquirir agora!
         </CallButton>
@@ -194,6 +195,9 @@ const WhatsappBotPage = () => {
         <Typography variant="subtitle1" color={COLORS.primary}>
           2024 © Todos direitos reservados.
         </Typography>
+        <a href="https://storyset.com/online">
+          Online illustrations by Storyset
+        </a>
       </FooterSection>
     </Container>
   );
@@ -327,6 +331,10 @@ const CardAdvantages = styled(Box)`
   padding: 1rem;
   background-color: white;
   border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 `;
 
 // Packages Section ======================
@@ -378,7 +386,7 @@ const PricesSection = styled(Box)``;
 
 // Last Call Section =======================
 const LastCallSection = styled(Box)`
-  background: linear-gradient(to right, ${COLORS.primary}, white);
+  background: linear-gradient(to right, #aaa, #f5f5f5);
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -393,8 +401,8 @@ const LastCallSection = styled(Box)`
 `;
 
 const StrokeText = styled(Typography)`
-  -webkit-text-stroke: 1px;
-  -webkit-text-stroke-color: white;
+  /* -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: white; */
 `;
 
 // Footer Section =========================
