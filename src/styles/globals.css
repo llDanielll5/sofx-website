@@ -1,3 +1,18 @@
+:root {
+  --text-effect-1: linear-gradient(
+    45deg,
+    #640067 20%,
+    #004690 40%,
+    #00d9d9 60%,
+    #009f25 80%
+  );
+}
+
+@font-face {
+  font-family: "Disket Bold";
+  src: url("/fonts/Disket-Mono-Bold.ttf");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -76,6 +91,28 @@ button {
 }
 .show-scroll {
   bottom: 7rem;
+}
+.carousel {
+  padding: 1rem 0;
+}
+
+@keyframes textShine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/* effects */
+.text-effect-1 {
+  background: var(--text-effect-1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 500% auto;
+  animation: textShine 5s ease-in-out infinite alternate;
 }
 
 @media screen and (max-width: 1023px) {

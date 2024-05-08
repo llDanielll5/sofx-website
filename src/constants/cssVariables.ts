@@ -10,6 +10,8 @@ export const COLORS = {
   borderColor: "hsl(228, 99%,98%)",
   bodyColor: "#fff",
   containerColor: "#fff",
+  primary: "#5271FF",
+  darkPrimary: "#241E48",
 };
 
 export const SPACING = {
