@@ -8,6 +8,7 @@ import Works from "./body/works";
 import Contact from "./body/contact";
 import { useGetScrollPosition } from "../../hooks/useGetScrollPosition";
 import { useRouter } from "next/router";
+import Partners from "./body/partners";
 
 const LandingPage = () => {
   const currentScroll = useGetScrollPosition();
@@ -29,6 +30,7 @@ const LandingPage = () => {
       <Header />
       <Banner />
       <AboutUs />
+      <Partners />
       <Services />
       <Works />
       <Contact />

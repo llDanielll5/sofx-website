@@ -33,24 +33,9 @@ export const allServices = [
 
 export const allWorks = [
   {
-    href: "https://ongcemic.org",
-    title: "CEMIC | Website/Sistema",
-    img: "images/portfolio/cemic.png",
-  },
-  {
     href: "https://preeset.com",
     title: "Preeset | Website/Sistema",
     img: "images/portfolio/preeset.png",
-  },
-  {
-    href: "https://doutorreparosoficial.com.br",
-    title: "Dr Reparos | Website",
-    img: "images/portfolio/drreparos.png",
-  },
-  {
-    href: "https://sobmedidamoveisplanejados.com.br/",
-    title: "Sob Medida | Website",
-    img: "images/portfolio/sobmedida.png",
   },
   {
     href: "https://bijuteria.vercel.app",
@@ -61,10 +46,5 @@ export const allWorks = [
     href: "https://travel-landing-page-model.vercel.app/",
     title: "Viagens | Website Model",
     img: "images/portfolio/travel.png",
-  },
-  {
-    href: "https://play.google.com/store/apps/details?id=com.lldanielll5.Pratix",
-    title: "Pratix | Aplicativo Mobile (Android)",
-    img: "images/portfolio/pratix.jpg",
   },
 ];

@@ -1,10 +1,4 @@
-import SpeedIcon from "@mui/icons-material/Speed";
-import GroupIcon from "@mui/icons-material/Group";
-import VolunteerActivismIcon from "@mui/icons-material/VolunteerActivism";
-import SecurityUpdateGoodIcon from "@mui/icons-material/SecurityUpdateGood";
-import LocalConvenienceStoreIcon from "@mui/icons-material/LocalConvenienceStore";
-import LeaderboardIcon from "@mui/icons-material/Leaderboard";
-import { COLORS } from "../constants/cssVariables";
+/* eslint-disable @next/next/no-img-element */
 
 export const advantagesMock = (fontSize: string) => [
   {
