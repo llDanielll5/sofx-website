@@ -18,6 +18,9 @@ const WhatsBot = () => {
   );
 };
 
-const Container = styled(Box)``;
+const Container = styled(Box)`
+  background-attachment: fixed;
+  background-image: url(/images/whatsbot/fundo.jpeg);
+`;
 
 export default WhatsBot;
