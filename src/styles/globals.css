@@ -104,6 +104,14 @@ button {
     background-position: 100% 50%;
   }
 }
+@keyframes brilho {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
 
 /* effects */
 .text-effect-1 {
@@ -111,8 +119,16 @@ button {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
+  animation: textShine 0.3s ease-in-out infinite alternate;
+}
+.text-effect-2 {
+  background: linear-gradient(90deg, #ef7916 17.85%, #f4ba23 82.56%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   background-size: 500% auto;
-  animation: textShine 5s ease-in-out infinite alternate;
+  animation: 1.5s ease-in-out infinite alternate brilho;
 }
 
 @media screen and (max-width: 1023px) {

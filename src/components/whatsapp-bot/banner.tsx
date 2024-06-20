@@ -91,16 +91,10 @@ const VSL = styled("iframe")`
 `;
 
 const StyledButton = styled(Button)`
-  @keyframes brilho {
-    0% {
-      background-position: 0 0;
-    }
-    100% {
-      background-position: 100% 0;
-    }
-  }
   font-family: "Montserrat";
   text-transform: uppercase;
+  border-radius: 3rem;
+  padding: 1rem 2rem;
   font-size: 1.5rem;
   color: white;
   z-index: 0;
