@@ -1,7 +1,14 @@
-import { Box, Button, Card, Divider, Typography, styled } from "@mui/material";
 import React from "react";
+import { Box, Button, Card, Divider, Typography, styled } from "@mui/material";
+import { whatsappPhone } from "../../constants/phone";
 
 const ReceivesWhatsBot = () => {
+  const msg = `Gostaria de saber mais sobre o WhatsBot Gold e como posso faturar com ele.`;
+  const zapHref = `https://api.whatsapp.com/send?phone=${whatsappPhone}&text=${encodeURIComponent(
+    msg
+  )}`;
+
+  const openWhatsapp = () => window.open(zapHref, "_blank");
   return (
     <Container>
       <Typography variant="h4" fontFamily={"Montserrat"} color="rgb(50,50,50)">
@@ -125,7 +132,7 @@ const ReceivesWhatsBot = () => {
           Ou R$399,00 à vista!
         </Typography>
 
-        <StyledButton>COMECE AGORA</StyledButton>
+        <StyledButton onClick={openWhatsapp}>COMECE AGORA</StyledButton>
       </ValueContainer>
     </Container>
   );

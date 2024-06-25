@@ -1,25 +1,16 @@
-/* eslint-disable @next/next/no-img-element */
 import React from "react";
-import {
-  Box,
-  Button,
-  Stack,
-  Typography,
-  keyframes,
-  styled,
-} from "@mui/material";
-import useWindowSize from "../../hooks/useWindowSize";
+import { Box, Button, Stack, Typography, styled } from "@mui/material";
 import { whatsappPhone } from "../../constants/phone";
 
-const BannerWhatsBot = () => {
-  const { width } = useWindowSize();
-  const msg = `Gostaria de saber mais sobre o WhatsBot Gold e como posso faturar com ele.`;
+// import { Container } from './styles';
+
+const WhatsBotNewClient = () => {
+  const msg = `Olá, realizei o pagamento do WhatsBot Gold e gostaria de obter meu acesso instantâneo ao meu produto!`;
   const zapHref = `https://api.whatsapp.com/send?phone=${whatsappPhone}&text=${encodeURIComponent(
     msg
   )}`;
 
   const openWhatsapp = () => window.open(zapHref, "_blank");
-
   return (
     <Container>
       <Stack
@@ -28,40 +19,32 @@ const BannerWhatsBot = () => {
         justifyContent={"center"}
         my={3}
       >
-        <Logo src="/images/whatsbot/logo.png" alt="" />
+        <Logo
+          onClick={() =>
+            window.open("https://sofx.com.br/services/whatsbot", "_blank")
+          }
+          src="/images/whatsbot/logo.png"
+          alt=""
+        />
       </Stack>
+
       <Box
         width={"100%"}
         display={"flex"}
         alignItems="center"
         justifyContent="center"
         flexDirection="column"
-        rowGap={"1rem"}
+        rowGap={"3rem"}
       >
         <CallText variant="h4" color="white" fontFamily={"Montserrat"}>
-          Você é <b>Desenvolvedor</b> e quer <b>Faturar com Rapidez?</b>
+          Conseguiu realizar o <b>Pagamento?</b>
           <br />
-          Eu tenho o produto que vai fazer você <b>Lucrar Muito!</b>
+          Clique no botão abaixo, e receba seu produto <br /> <b>AGORA!</b>
         </CallText>
 
-        <Typography
-          variant="h5"
-          color="white"
-          fontWeight={"300"}
-          fontFamily={"Montserrat"}
-        >
-          Pare de procurar emprego, e seja seu próprio chefe!
-        </Typography>
-
-        <VSL
-          allowFullScreen
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerPolicy="strict-origin-when-cross-origin"
-          src="https://www.youtube.com/embed/vrLGJy9rtkw?controls=0&rel=0&playsinline=0&modestbranding=0&autoplay=0&enablejsapi=1&widgetid=1"
-        />
-
-        <StyledButton onClick={openWhatsapp}>Começar Vender</StyledButton>
+        <StyledButton onClick={openWhatsapp}>
+          RECEBER MEUS PRODUTOS!
+        </StyledButton>
       </Box>
     </Container>
   );
@@ -71,13 +54,18 @@ const Container = styled(Box)`
   background-image: url(/images/whatsbot-banner.png);
   background-position: top center;
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: rgb(30, 30, 30);
   padding: 1.5rem;
   text-align: center;
+  height: 100vh;
 `;
 const Logo = styled("img")`
   max-width: 500px;
-
+  cursor: pointer;
   @media screen and (max-width: 760px) {
     max-width: 300px;
   }
@@ -91,12 +79,6 @@ const CallText = styled(Typography)`
     -webkit-text-fill-color: transparent;
   }
 `;
-const VSL = styled("iframe")`
-  width: 70vw;
-  height: 450px;
-  border-radius: 0.5rem;
-`;
-
 const StyledButton = styled(Button)`
   font-family: "Montserrat";
   text-transform: uppercase;
@@ -116,4 +98,4 @@ const StyledButton = styled(Button)`
   }
 `;
 
-export default BannerWhatsBot;
+export default WhatsBotNewClient;
