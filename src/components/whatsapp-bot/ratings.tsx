@@ -43,7 +43,7 @@ const RatingsWhatsBot = () => {
   return (
     <Container>
       <Title variant="h4" className="text-effect-2" textAlign={"center"} my={2}>
-        O que algum de nossos membros falam
+        O que nossos membros falam
       </Title>
 
       <Typography
