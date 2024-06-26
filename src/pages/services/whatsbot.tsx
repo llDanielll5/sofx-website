@@ -5,6 +5,7 @@ import AdvantagesWhatsBot from "../../components/whatsapp-bot/advantages";
 import JournalsWhatsBot from "../../components/whatsapp-bot/journals";
 import ReceivesWhatsBot from "../../components/whatsapp-bot/receives";
 import FooterWhatsBot from "../../components/whatsapp-bot/footer";
+import RatingsWhatsBot from "../../components/whatsapp-bot/ratings";
 
 const WhatsBot = () => {
   return (
@@ -13,6 +14,7 @@ const WhatsBot = () => {
       <AdvantagesWhatsBot />
       <JournalsWhatsBot />
       <ReceivesWhatsBot />
+      <RatingsWhatsBot />
       <FooterWhatsBot />
     </Container>
   );

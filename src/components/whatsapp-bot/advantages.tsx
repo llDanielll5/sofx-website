@@ -19,9 +19,9 @@ interface MiniCardsInterface {
 
 const advantages: AdvantagesInterface[] = [
   {
-    title: "Código Pronto",
-    description: "Produto Pronto para vender em até 1 dia!",
-    img: "/images/whatsbot/code.png",
+    title: "Robôs Prontos",
+    description: "Produto Pronto para atualizar e vender!",
+    img: "/images/whatsbot/bots.png",
   },
   {
     title: "Suporte Vitalício",

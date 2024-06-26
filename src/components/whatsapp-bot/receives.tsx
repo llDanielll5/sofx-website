@@ -120,7 +120,7 @@ const ReceivesWhatsBot = () => {
           color="white"
           fontWeight={700}
         >
-          12X de <span style={{ fontSize: "3rem" }}>R$39,90</span>
+          10X de <span style={{ fontSize: "3rem" }}>R$49,79</span>
         </Typography>
 
         <Typography
@@ -129,10 +129,10 @@ const ReceivesWhatsBot = () => {
           color="white"
           fontWeight={500}
         >
-          Ou R$399,00 à vista!
+          Ou R$397,90 à vista!
         </Typography>
 
-        <StyledButton onClick={openWhatsapp}>COMECE AGORA</StyledButton>
+        <StyledButton onClick={openWhatsapp}>COMECE AGORA!</StyledButton>
       </ValueContainer>
     </Container>
   );
@@ -149,6 +149,10 @@ const ReceiveContainer = styled(Card)`
   border-bottom: 4px solid orangered;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
+
+  @media screen and (max-width: 760px) {
+    width: 90%;
+  }
 `;
 const ReceiveSingle = styled(Box)`
   display: flex;
@@ -160,6 +164,10 @@ const ReceiveSingle = styled(Box)`
 const ReceiveImg = styled("img")`
   width: 40%;
   border-radius: 1rem;
+
+  @media screen and (max-width: 760px) {
+    width: 60%;
+  }
 `;
 const ValueText = styled("h2")`
   font-family: "Montserrat";
@@ -197,6 +205,10 @@ const ValueContainer = styled(Card)`
   width: 70%;
   border-top-right-radius: 0;
   border-top-left-radius: 0;
+
+  @media screen and (max-width: 760px) {
+    width: 90%;
+  }
 `;
 const Logo = styled("img")`
   max-width: 50%;

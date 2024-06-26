@@ -21,7 +21,7 @@ const FooterWhatsBot = () => {
 };
 
 const Container = styled(Box)`
-  background-color: rgb(50, 50, 50);
+  background-color: rgb(90, 90, 90);
   text-align: center;
   padding: 1.5rem;
   display: flex;
