@@ -10,6 +10,7 @@ import RatingsWhatsBot from "../../components/whatsapp-bot/ratings";
 const WhatsBot = () => {
   return (
     <Container>
+      <title>WhatsBot Gold | Saia do CLT e seja seu Chefe!</title>
       <BannerWhatsBot />
       <AdvantagesWhatsBot />
       <JournalsWhatsBot />
