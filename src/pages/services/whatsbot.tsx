@@ -6,11 +6,18 @@ import JournalsWhatsBot from "../../components/whatsapp-bot/journals";
 import ReceivesWhatsBot from "../../components/whatsapp-bot/receives";
 import FooterWhatsBot from "../../components/whatsapp-bot/footer";
 import RatingsWhatsBot from "../../components/whatsapp-bot/ratings";
+import Head from "next/head";
 
 const WhatsBot = () => {
   return (
     <Container>
-      <title>WhatsBot Gold | Saia do CLT e seja seu Chefe!</title>
+      <Head>
+        <title>WhatsBot Gold | Saia do CLT e seja seu Chefe!</title>
+        <meta
+          name="description"
+          content="Saia do CLT e ganhe mais com essa solução!"
+        />
+      </Head>
       <BannerWhatsBot />
       <AdvantagesWhatsBot />
       <JournalsWhatsBot />
