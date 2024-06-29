@@ -39,9 +39,9 @@ const BannerWhatsBot = () => {
         rowGap={"1rem"}
       >
         <CallText variant="h4" color="white" fontFamily={"Montserrat"}>
-          Você é <b>Desenvolvedor</b> e quer <b>Faturar com Rapidez?</b>
+          Você é <b>Desenvolvedor</b> e quer <b>Sair do CLT?</b>
           <br />
-          Eu tenho o produto que vai fazer você <b>Lucrar Muito!</b>
+          Quer ganhar bem trabalhando no que <b>Gosta?</b>
         </CallText>
 
         <Typography
