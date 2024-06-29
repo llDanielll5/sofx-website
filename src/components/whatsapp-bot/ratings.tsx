@@ -42,7 +42,7 @@ const faq = [
 const RatingsWhatsBot = () => {
   return (
     <Container>
-      <Title
+      {/* <Title
         variant="h4"
         className="text-effect-2"
         textAlign={"center"}
@@ -50,7 +50,7 @@ const RatingsWhatsBot = () => {
         fontFamily={"Montserrat"}
       >
         O que nossos membros falam
-      </Title>
+      </Title> */}
 
       <Typography
         variant="h4"
