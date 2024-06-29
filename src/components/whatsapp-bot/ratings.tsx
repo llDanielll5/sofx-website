@@ -42,7 +42,13 @@ const faq = [
 const RatingsWhatsBot = () => {
   return (
     <Container>
-      <Title variant="h4" className="text-effect-2" textAlign={"center"} my={2}>
+      <Title
+        variant="h4"
+        className="text-effect-2"
+        textAlign={"center"}
+        my={2}
+        fontFamily={"Montserrat"}
+      >
         O que nossos membros falam
       </Title>
 

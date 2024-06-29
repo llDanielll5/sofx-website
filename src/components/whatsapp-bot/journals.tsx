@@ -28,7 +28,13 @@ const journals: JournalsInterface[] = [
 const JournalsWhatsBot = () => {
   return (
     <Container>
-      <Title variant="h4" className="text-effect-2" textAlign={"center"} my={2}>
+      <Title
+        variant="h4"
+        className="text-effect-2"
+        textAlign={"center"}
+        my={2}
+        fontFamily={"Montserrat"}
+      >
         O que a mídia fala sobre Robô de Atendimento!
       </Title>
 
@@ -49,7 +55,7 @@ const JournalsWhatsBot = () => {
             key={i}
             image={v.img}
             onClick={() => window.open(v.url, "_blank")}
-          ></JournalSingle>
+          />
         ))}
       </JournalsContainer>
     </Container>

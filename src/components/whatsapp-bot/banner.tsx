@@ -50,7 +50,7 @@ const BannerWhatsBot = () => {
           fontWeight={"300"}
           fontFamily={"Montserrat"}
         >
-          Pare de procurar emprego, e seja seu próprio chefe!
+          Assista esse vídeo e entenda como posso te ajudar a mudar de vida!
         </Typography>
 
         <VSL
@@ -58,7 +58,7 @@ const BannerWhatsBot = () => {
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin"
-          src="https://www.youtube.com/embed/vrLGJy9rtkw?controls=0&rel=0&playsinline=0&modestbranding=0&autoplay=0&enablejsapi=1&widgetid=1"
+          src="https://www.youtube.com/embed/UE-PIzk3kas?controls=0&rel=0&playsinline=0&modestbranding=0&autoplay=0&enablejsapi=1&widgetid=1"
         />
 
         <StyledButton onClick={openWhatsapp}>Começar Vender</StyledButton>
