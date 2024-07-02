@@ -120,7 +120,7 @@ const ReceivesWhatsBot = () => {
           color="white"
           fontWeight={700}
         >
-          10X de <span style={{ fontSize: "3rem" }}>R$49,79</span>
+          10X de <span style={{ fontSize: "3rem" }}>R$19,90</span>
         </Typography>
 
         <Typography
@@ -129,7 +129,7 @@ const ReceivesWhatsBot = () => {
           color="white"
           fontWeight={500}
         >
-          Ou R$397,90 à vista!
+          Ou R$99,90 à vista!
         </Typography>
 
         <StyledButton onClick={openWhatsapp}>COMECE AGORA!</StyledButton>
