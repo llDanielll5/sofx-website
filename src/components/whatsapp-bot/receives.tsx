@@ -97,7 +97,7 @@ const ReceivesWhatsBot = () => {
           <Typography variant="h3" fontFamily={"Montserrat"} color="white">
             Valor Total:{" "}
             <span style={{ textDecorationLine: "line-through" }}>
-              R$2.276,00
+              R$3.687,00
             </span>
           </Typography>
         </TotalValue>
@@ -111,7 +111,7 @@ const ReceivesWhatsBot = () => {
           fontWeight={500}
         >
           De:{" "}
-          <span style={{ textDecorationLine: "line-through" }}>R$2.899,00</span>{" "}
+          <span style={{ textDecorationLine: "line-through" }}>R$4.199,00</span>{" "}
           Por apenas
         </Typography>
 
@@ -121,7 +121,7 @@ const ReceivesWhatsBot = () => {
           color="white"
           fontWeight={700}
         >
-          10X de <span style={{ fontSize: "3rem" }}>R$19,90</span>
+          10X de <span style={{ fontSize: "3rem" }}>R$39,79</span>
         </Typography>
 
         <Typography
@@ -130,7 +130,7 @@ const ReceivesWhatsBot = () => {
           color="white"
           fontWeight={500}
         >
-          Ou R$99,90 à vista!
+          Ou R$397,90 à vista!
         </Typography>
 
         <StyledButton onClick={openWhatsapp}>COMECE AGORA!</StyledButton>
