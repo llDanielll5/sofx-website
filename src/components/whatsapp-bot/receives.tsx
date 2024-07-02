@@ -64,7 +64,7 @@ const ReceivesWhatsBot = () => {
             sx={{ textDecorationLine: "underline" }}
             fontFamily={"Montserrat"}
           >
-            Mini Curso para trabalhar com o Banco de Dados do Robô WhatsBot
+            Acesso ao nosso grupo especial de desenvolvedores do Discord!
           </Typography>
           <ValueText>
             De <span>R$799,00</span> por ZERO
@@ -79,10 +79,11 @@ const ReceivesWhatsBot = () => {
           </Typography>
 
           <Typography variant="h6" fontFamily={"Montserrat"} textAlign={"left"}>
-            Acesso ao nosso grupo especial de desenvolvedores do Discord!
+            Você tem direito a pedir para que façamos 1 modelo de robôzinho
+            completo para alavancar sua primeira venda!
           </Typography>
           <ValueText>
-            De <span>R$79,00</span> por ZERO
+            De <span>R$1490,00</span> por ZERO
           </ValueText>
         </ReceiveSingle>
 
