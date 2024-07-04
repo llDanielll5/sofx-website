@@ -8,8 +8,8 @@ import {
   keyframes,
   styled,
 } from "@mui/material";
-import useWindowSize from "../../hooks/useWindowSize";
-import { whatsappPhone } from "../../constants/phone";
+import useWindowSize from "../../../hooks/useWindowSize";
+import { whatsappPhone } from "../../../constants/phone";
 
 const BannerWhatsBot = () => {
   const { width } = useWindowSize();

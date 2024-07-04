@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Button, Card, Divider, Typography, styled } from "@mui/material";
-import { whatsappPhone } from "../../constants/phone";
+import { whatsappPhone } from "../../../constants/phone";
 
 const ReceivesWhatsBot = () => {
   const msg = `Gostaria de saber mais sobre o WhatsBot Gold e como posso faturar com ele.`;

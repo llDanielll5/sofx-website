@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
-import { Box, Button, Rating, Typography, styled } from "@mui/material";
+import { Box, Button, Card, Rating, Typography, styled } from "@mui/material";
 import { COLORS } from "../../constants/cssVariables";
 import { whatsappPhone } from "../../constants/phone";
 import { advantagesMock } from "../../_mock/whatsapp";
@@ -8,6 +8,10 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import useWindowSize from "../../hooks/useWindowSize";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import BannerWhatsPremium, {
+  StyledButtonWhatsBotPremium,
+} from "../../components/whatsbot/premium/banner";
+import HeaderWhatsBotPremium from "../../components/whatsbot/premium/header";
 
 const ratings = [
   {
@@ -73,55 +77,10 @@ const WhatsappBotPage = () => {
 
   return (
     <Container>
-      <HeaderSection>
-        {width! > 900 && <LogoImg src="/images/white-logo.png" />}
-        <Typography
-          variant="h4"
-          color={COLORS.primary}
-          className="text-effect-1"
-        >
-          Robô em Super Promoção!
-        </Typography>
-        <CallButton
-          onClick={openWhatsapp}
-          variant="contained"
-          endIcon={<WhatsAppIcon fontSize="large" />}
-        >
-          Quero garantir minha Promoção!
-        </CallButton>
-      </HeaderSection>
+      <HeaderWhatsBotPremium />
+      <BannerWhatsPremium />
 
-      <CallSection>
-        <CallTextContainer>
-          {width! < 900 && <LogoImg src="/images/white-logo.png" />}
-          <Typography
-            color={COLORS.darkPrimary}
-            variant="h2"
-            fontWeight={"bold"}
-            // fontFamily={"Disket Bold"}
-          >
-            Acelere o atendimento de sua empresa com nosso robô de Whatsapp!
-          </Typography>
-          <Typography
-            color={COLORS.darkPrimary}
-            variant="h5"
-            fontWeight={"bold"}
-          >
-            Tenha o controle de seus atendimentos whatsapp na palma de sua mão.
-          </Typography>
-          <Typography
-            color={COLORS.darkPrimary}
-            variant="h6"
-            fontWeight={"bold"}
-          >
-            Priorize seus atendimentos e consiga mais clientes com nossas
-            soluções de automação.
-          </Typography>
-        </CallTextContainer>
-        <img src="/images/bot-cell.png" alt="" />
-      </CallSection>
-
-      <Button
+      <StyledButtonWhatsBotPremium
         onClick={openWhatsapp}
         variant="contained"
         sx={{ borderRadius: 0 }}
@@ -129,13 +88,13 @@ const WhatsappBotPage = () => {
         endIcon={<WhatsAppIcon fontSize="large" />}
       >
         Adquirir Meu Robô!
-      </Button>
+      </StyledButtonWhatsBotPremium>
 
       <TitleContainer>
         <Typography
           variant="h3"
-          color="white"
-          fontFamily="'Disket Bold', sans-serif"
+          color="#036c6f"
+          fontFamily="'Montserrat', sans-serif"
         >
           VANTAGENS
         </Typography>
@@ -144,12 +103,20 @@ const WhatsappBotPage = () => {
       <AdvantagesSection>
         {advantagesMock(width! > 900 ? "240" : width! > 720 ? "120" : "80").map(
           (v, i) => (
-            <CardAdvantages key={i}>
+            <CardAdvantages key={i} elevation={10}>
               {v.icon}
-              <Typography variant="h6" textAlign="center">
+              <Typography
+                variant="h6"
+                textAlign="center"
+                fontFamily={"Montserrat"}
+              >
                 + {v.title}
               </Typography>
-              <Typography variant="subtitle2" textAlign="center">
+              <Typography
+                variant="subtitle2"
+                textAlign="center"
+                fontFamily={"Montserrat"}
+              >
                 {v.description}
               </Typography>
             </CardAdvantages>
@@ -174,24 +141,28 @@ const WhatsappBotPage = () => {
       <PricesSection></PricesSection>
 
       <LastCallSection>
-        <StrokeText variant="h3" className="text-effect-1">
+        <StrokeText variant="h3" className="text-effect-3">
           Fale agora com nossa equipe e saiba como automatizar sua empresa hoje!
         </StrokeText>
 
-        <CallButton
+        <StyledButtonWhatsBotPremium
           variant="contained"
           fullWidth
           color="primary"
           endIcon={<WhatsAppIcon fontSize="large" />}
-          //   sx={{ color: COLORS.darkPrimary }}
           onClick={openWhatsapp}
         >
           Adquirir agora!
-        </CallButton>
+        </StyledButtonWhatsBotPremium>
       </LastCallSection>
 
       <FooterSection>
-        <LogoImg src="/images/logo.jpg" />
+        <LogoImg
+          src="/images/logo-transparent.png"
+          onClick={() =>
+            window.open("https://sofx.com.br", "_blank", "norefereer")
+          }
+        />
         <Typography variant="subtitle1" color={COLORS.primary}>
           2024 © Todos direitos reservados.
         </Typography>
@@ -206,29 +177,12 @@ const WhatsappBotPage = () => {
 export default WhatsappBotPage;
 
 const Container = styled(Box)`
-  position: relative;
-  width: 100%;
+  background-attachment: fixed;
+  background-image: url(/images/whatsbot/fundo.jpeg);
 `;
 
 // Header Section ============================
-const HeaderSection = styled(Box)`
-  padding: 1.5rem;
-  position: fixed;
-  width: 100vw;
-  z-index: 10;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  background-color: #241e48;
-  border-bottom: 2px solid #f4f4f4;
 
-  @media screen and (max-width: 900px) {
-    flex-direction: column;
-    row-gap: 1rem;
-  }
-`;
 const CallButton = styled(Button)`
   color: white;
   font-size: 1.5vw;
@@ -256,39 +210,15 @@ const LogoImg = styled("img")`
   width: 100%;
   max-width: 200px;
   min-width: 120px;
+  cursor: pointer;
 `;
 const TitleContainer = styled(Box)`
-  background-color: ${COLORS.darkPrimary};
+  background: none;
   padding: 3rem 3rem 0 3rem;
 
   @media screen and (max-width: 500px) {
     padding: 1rem 1rem 0 1rem;
   }
-`;
-
-// Call Section =============================
-const CallSection = styled(Box)`
-  background: linear-gradient(to right, ${COLORS.primary}, white);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10rem 2rem 2rem 2rem;
-
-  @media screen and (max-width: 900px) {
-    padding-top: 12rem;
-    flex-direction: column;
-  }
-  @media screen and (max-width: 500px) {
-    padding-top: 15rem;
-  }
-`;
-const CallTextContainer = styled(Box)`
-  display: flex;
-  align-self: flex-start;
-  justify-content: flex-start;
-  flex-direction: column;
-  padding: 1%;
-  row-gap: 1rem;
 `;
 
 // Advantages Section ================
@@ -299,8 +229,7 @@ const AdvantagesSection = styled(Box)`
   grid-column-gap: 1rem;
   grid-row-gap: 1rem;
   padding: 3rem;
-  background-color: ${COLORS.darkPrimary};
-
+  background: none;
   .div1 {
     grid-area: 1 / 1 / 2 / 2;
   }
@@ -327,10 +256,9 @@ const AdvantagesSection = styled(Box)`
     padding-top: 1rem;
   }
 `;
-const CardAdvantages = styled(Box)`
+const CardAdvantages = styled(Card)`
   padding: 1rem;
   background-color: white;
-  border-radius: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -352,6 +280,7 @@ const CarouselContainer = styled(Box)`
   width: 100%;
 `;
 const RatingCard = styled(Box)`
+  background-color: white;
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
@@ -386,7 +315,7 @@ const PricesSection = styled(Box)``;
 
 // Last Call Section =======================
 const LastCallSection = styled(Box)`
-  background: linear-gradient(to right, #aaa, #f5f5f5);
+  background: linear-gradient(to left, #241e48 10%, black 100%);
   display: flex;
   align-items: center;
   flex-direction: column;

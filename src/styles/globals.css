@@ -130,6 +130,14 @@ button {
   background-size: 500% auto;
   animation: 1.5s ease-in-out infinite alternate brilho;
 }
+.text-effect-3 {
+  background: linear-gradient(90deg, #036c6f 17.85%, #89c6e9 82.56%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 500% auto;
+  animation: 1.5s ease-in-out infinite alternate brilho;
+}
 
 @media screen and (max-width: 1023px) {
   .active-link {
