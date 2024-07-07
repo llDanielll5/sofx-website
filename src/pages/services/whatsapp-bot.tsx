@@ -6,7 +6,7 @@ import { whatsappPhone } from "../../constants/phone";
 import { advantagesMock } from "../../_mock/whatsapp";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import useWindowSize from "../../hooks/useWindowSize";
-import Carousel from "react-multi-carousel";
+import Carousel, { ResponsiveType } from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import BannerWhatsPremium, {
   StyledButtonWhatsBotPremium,
@@ -21,9 +21,16 @@ const ratings = [
     comment:
       "Excelente serviço! Nossa empresa trabalha com mais de 5 mil atendimentos Whatsapp por mês, e o robô foi uma mão na roda, aonde pudemos focar na gestão interna da empresa, e não mais ter a necessidade de ficar horas no atendimento!",
   },
+  {
+    name: "Gamer Hamburgueria",
+    stars: 5,
+    avatar: "/images/whatsbot/premium/clients/gamerhamburgueria.png",
+    comment:
+      "Nós estamos muito felizes de usar o WhatsBot na nossa empresa. Ele acelerou nossas vendas e facilitou demais para trabalharmos com o sistema automático! Super recomendo.",
+  },
 ];
 
-const responsive = {
+const responsive: ResponsiveType = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
     breakpoint: { max: 4000, min: 3000 },
@@ -307,7 +314,7 @@ const RatingHeader = styled(Box)`
   }
 `;
 const RatingAvatar = styled("img")`
-  width: 120px;
+  width: 100px;
 `;
 
 // Prices Section ===========================
