@@ -30,7 +30,7 @@ const HeaderWhatsBotPremium = () => {
         variant="contained"
         endIcon={<WhatsAppIcon sx={{ fontSize: "50px" }} />}
       >
-        Quero garantir minha Promoção!
+        Testar 7 dias Grátis
       </StyledButtonWhatsBotPremium>
     </HeaderSection>
   );

@@ -41,9 +41,10 @@ const BannerWhatsPremium = () => {
         rowGap={"1rem"}
       >
         <CallText variant="h5" color="white" fontFamily={"Montserrat"}>
-          Você que é dono de empresa ou microempresário.
-          <br />
-          Quer Aumentar suas Vendas e melhorar seu atendimento?
+          Aumente seu faturamento até 70% mais com nosso robozinho para
+          WhatsApp. <br />
+          Tenha o controle de sua empresa na palma de sua mão <br />
+          Não perca mais clientes por falta de atendimento!
         </CallText>
 
         <Typography
@@ -64,7 +65,7 @@ const BannerWhatsPremium = () => {
         /> */}
 
         <StyledButtonWhatsBotPremium onClick={openWhatsapp}>
-          Saber Mais
+          Testar 7 dias Grátis
         </StyledButtonWhatsBotPremium>
 
         <CallSection>
@@ -130,7 +131,7 @@ export const StyledButtonWhatsBotPremium = styled(Button)`
   font-size: 1.3rem;
   color: white;
   z-index: 0;
-  background: linear-gradient(90deg, #036c6f, #89c6e9, #036c6f, #89c6e9);
+  background: linear-gradient(90deg, #04484b, #3fb2f5, #04484b, #3fb2f5);
   background-size: 400% 200%;
   transition: opacity 0.3s linear;
   transition: background 1.6s all;
