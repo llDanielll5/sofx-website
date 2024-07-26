@@ -69,13 +69,17 @@ const Banner = () => {
 };
 
 const Container = styled(Box)`
+  /* background-image: url(https://img.freepik.com/free-vector/background-realistic-abstract-technology-particle_23-2148431735.jpg?t=st=1722029779~exp=1722033379~hmac=df30a2a2167b693b93bb57f9d529e264574065beea02f7f797a17583beec822e&w=996); */
+  background-position: center top;
+  background-attachment: local;
+  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   width: 100%;
   padding: 1rem 3rem;
   column-gap: 6rem;
-  margin-top: 100px;
+  margin-top: 93px;
 `;
 const TextContainer = styled(Box)`
   display: flex;

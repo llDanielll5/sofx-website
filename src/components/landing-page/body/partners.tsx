@@ -24,8 +24,8 @@ const enterprises = [
   },
 ];
 
-const openUrl = (url: string) => {
-  window.open(url, "_blank");
+export const openUrl = (url: string) => {
+  window.open(url, "_blank", "noreferrer,noopener");
 };
 
 const Partners = () => {
@@ -58,14 +58,16 @@ const InnerContainer = styled(Box)`
   padding: 3rem;
   display: flex;
   align-items: center;
-  justify-content: center;
+
   row-gap: 2rem;
   column-gap: 5%;
   flex-wrap: wrap;
 `;
 const EnterpriseCard = styled(Box)`
-  filter: grayscale(100%);
+  /* filter: grayscale(100%); */
   cursor: pointer;
+  transition: 0.3s;
+  scale: 0.9;
   display: flex;
   flex-direction: column;
   row-gap: 0.5rem;
@@ -76,7 +78,7 @@ const EnterpriseCard = styled(Box)`
     padding-right: 0%;
   }
   :hover {
-    filter: grayscale(0%);
+    scale: 1;
   }
 `;
 const Logo = styled("img")`

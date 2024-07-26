@@ -63,6 +63,7 @@ const CardsContainer = styled(Box)`
 `;
 
 const CardSingle = styled(Box)`
+  scale: 0.9;
   border-radius: 1rem;
   display: flex;
   align-items: center;
@@ -71,12 +72,12 @@ const CardSingle = styled(Box)`
   min-height: 200px;
   cursor: pointer;
   padding: 2rem 1rem;
-  transition: 0.1s;
+  transition: 0.3s;
   -webkit-box-shadow: 0px 0px 8px 0px rgba(83, 115, 255, 1);
   -moz-box-shadow: 0px 0px 8px 0px rgba(83, 115, 255, 1);
   box-shadow: 0px 0px 8px 0px rgba(83, 115, 255, 1);
   :hover {
-    opacity: 0.8;
+    scale: 1;
   }
 
   @media screen and (max-width: 760px) {

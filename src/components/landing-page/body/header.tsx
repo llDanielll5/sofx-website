@@ -52,7 +52,7 @@ const Header = () => {
 
   return (
     <Container>
-      <StyledImg src={"/images/logo.jpg"} />
+      <StyledImg src={"/images/logo-transparent.png"} />
 
       {width! > 760 ? (
         <MenuContainer>

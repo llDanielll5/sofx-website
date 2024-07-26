@@ -36,7 +36,7 @@ const Contact = () => {
       </Box>
 
       <Footer>
-        <LogoImage src="/images/logo.jpg" />
+        <LogoImage src="/images/logo-transparent.png" />
       </Footer>
     </Container>
   );

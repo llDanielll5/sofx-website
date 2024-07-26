@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useRef } from "react";
-import { Box } from "@mui/material";
+import { Box, styled } from "@mui/material";
 import Header from "./body/header";
 import Banner from "./body/banner";
 import AboutUs from "./body/about-us";
@@ -9,6 +9,7 @@ import Contact from "./body/contact";
 import { useGetScrollPosition } from "../../hooks/useGetScrollPosition";
 import { useRouter } from "next/router";
 import Partners from "./body/partners";
+import OurProducts from "./body/our-products";
 
 const LandingPage = () => {
   const currentScroll = useGetScrollPosition();
@@ -26,16 +27,24 @@ const LandingPage = () => {
   // }, [scrollUp]);
 
   return (
-    <Box>
+    <Container>
       <Header />
       <Banner />
       <AboutUs />
+      <OurProducts />
       <Partners />
       <Services />
       <Works />
       <Contact />
-    </Box>
+    </Container>
   );
 };
+
+const Container = styled(Box)`
+  /* background-image: url(https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/blue-blur-background-anna-omelchenko.jpg); */
+  background-position: top center;
+  background-attachment: fixed;
+  background-size: cover;
+`;
 
 export default LandingPage;

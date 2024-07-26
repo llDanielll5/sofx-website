@@ -46,6 +46,8 @@ const CardsContainer = styled(Box)`
 `;
 
 const CardSingle = styled(Box)`
+  scale: 0.9;
+  background-color: white;
   border: 1px solid #5373ff;
   border-radius: 1rem;
   display: flex;
@@ -57,6 +59,9 @@ const CardSingle = styled(Box)`
   -webkit-box-shadow: 0px 0px 8px 0px rgba(83, 115, 255, 1);
   -moz-box-shadow: 0px 0px 8px 0px rgba(83, 115, 255, 1);
   box-shadow: 0px 0px 8px 0px rgba(83, 115, 255, 1);
+  :hover {
+    scale: 1;
+  }
   @media screen and (max-width: 760px) {
   }
 `;
