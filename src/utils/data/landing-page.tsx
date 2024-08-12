@@ -34,7 +34,7 @@ export const allServices = [
 export const allWorks = [
   {
     href: "https://preeset.com",
-    title: "Preeset | Website/Sistema",
+    title: "Preset | Website/Sistema",
     img: "images/portfolio/preeset.png",
   },
   {
@@ -46,5 +46,10 @@ export const allWorks = [
     href: "https://travel-landing-page-model.vercel.app/",
     title: "Viagens | Website Model",
     img: "images/portfolio/travel.png",
+  },
+  {
+    href: "https://www.mariepapelariafofa.com",
+    title: "Marie Papelaria Fofa | Website E-commerce",
+    img: "images/portfolio/marie.png",
   },
 ];
