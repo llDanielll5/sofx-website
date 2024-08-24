@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Divider, Typography, styled } from "@mui/material";
+import { Box, Divider, Grid, Typography, styled } from "@mui/material";
 
 const enterprises = [
   {
@@ -16,6 +16,11 @@ const enterprises = [
     name: "Doutor Reparos - Consertos e Manutenções",
     logo: "/images/partners/drreparos.png",
     url: "https://doutorreparosoficial.com.br",
+  },
+  {
+    name: "Acqua Kids",
+    logo: "/images/partners/acquakids.png",
+    url: "https://metodologiaconnect.com.br",
   },
   {
     name: "Diariaz",
@@ -35,9 +40,9 @@ const Partners = () => {
       <Typography variant="h5" p={"3rem"}>
         Nossos Clientes
       </Typography>
-      <InnerContainer>
+      <InnerContainer container spacing={3}>
         {enterprises.map((v, i) => (
-          <EnterpriseCard key={i} onClick={() => openUrl(v.url)}>
+          <EnterpriseCard item key={i} onClick={() => openUrl(v.url)}>
             <Logo src={v.logo} alt="" />
             <Paragraph variant="caption" color="gray">
               {v.name}
@@ -45,7 +50,14 @@ const Partners = () => {
           </EnterpriseCard>
         ))}
       </InnerContainer>
-
+      <Typography
+        variant="subtitle1"
+        textAlign="center"
+        color="neutral.500"
+        fontWeight={400}
+      >
+        Clique em um dos clientes para ver seus websites
+      </Typography>
       <Divider />
     </Container>
   );
@@ -54,36 +66,29 @@ const Partners = () => {
 const Container = styled(Box)`
   margin: 2rem 0;
 `;
-const InnerContainer = styled(Box)`
-  padding: 3rem;
-  display: flex;
-  align-items: center;
-
-  row-gap: 2rem;
-  column-gap: 5%;
-  flex-wrap: wrap;
+const InnerContainer = styled(Grid)`
+  padding: 2rem 5%;
+  @media screen and (max-width: 760px) {
+    justify-content: center;
+  }
 `;
-const EnterpriseCard = styled(Box)`
+const EnterpriseCard = styled(Grid)`
   /* filter: grayscale(100%); */
   cursor: pointer;
-  transition: 0.3s;
-  scale: 0.9;
   display: flex;
   flex-direction: column;
-  row-gap: 0.5rem;
   align-items: center;
   justify-content: center;
-  padding-right: 5%;
-  :last-child {
-    padding-right: 0%;
-  }
+  scale: 0.9;
+  transition: 0.2s;
   :hover {
     scale: 1;
   }
 `;
 const Logo = styled("img")`
-  min-width: 150px;
+  min-height: 120px;
   max-width: 200px;
+  object-fit: contain;
 `;
 const Paragraph = styled(Typography)``;
 

@@ -38,6 +38,11 @@ export const allWorks = [
     img: "images/portfolio/marie.png",
   },
   {
+    href: "https://karlabraganutricionista.com.br/",
+    title: "Karla Braga Nutricionista | Website/Landing Page Serviços",
+    img: "images/portfolio/karlabragasite.png",
+  },
+  {
     href: "https://preeset.com",
     title: "Preset | Website/Sistema",
     img: "images/portfolio/preeset.png",

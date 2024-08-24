@@ -42,12 +42,16 @@ const Container = styled(Box)`
 `;
 
 const InnerContainer = styled(Box)`
-  padding: 3rem;
+  padding: 2rem 5%;
   display: flex;
   align-items: center;
   row-gap: 2rem;
   column-gap: 5%;
   flex-wrap: wrap;
+
+  @media screen and (max-width: 760px) {
+    justify-content: center;
+  }
 `;
 const EnterpriseCard = styled(Card)`
   /* filter: grayscale(100%); */

@@ -12,7 +12,8 @@ const Banner = () => {
     msg
   )}`;
 
-  const openWhatsapp = () => window.open(zapHref, "_blank");
+  const openWhatsapp = () =>
+    window.open(zapHref, "_blank", "noopener,noreferrer");
 
   return (
     <Container>
