@@ -23,6 +23,16 @@ const enterprises = [
     url: "https://metodologiaconnect.com.br",
   },
   {
+    name: "Kairós Spa",
+    logo: "/images/partners/kairos.svg",
+    url: "https://kairosspa.com.br",
+  },
+  {
+    name: "CRAS - IntegraSUAS",
+    logo: "/images/partners/logo_cras.webp",
+    url: "https://integrasuas.com.br",
+  },
+  {
     name: "Diariaz",
     logo: "/images/partners/diariaz.png",
     url: "https://diariaz.vercel.app",

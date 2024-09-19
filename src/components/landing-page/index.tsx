@@ -1,15 +1,15 @@
-import React, { useCallback, useEffect, useRef } from "react";
-import { Box, styled } from "@mui/material";
+import React from "react";
+import Works from "./body/works";
 import Header from "./body/header";
 import Banner from "./body/banner";
 import AboutUs from "./body/about-us";
 import Services from "./body/services";
-import Works from "./body/works";
 import Contact from "./body/contact";
-import { useGetScrollPosition } from "../../hooks/useGetScrollPosition";
-import { useRouter } from "next/router";
 import Partners from "./body/partners";
 import OurProducts from "./body/our-products";
+import { useRouter } from "next/router";
+import { Box, styled } from "@mui/material";
+import { useGetScrollPosition } from "../../hooks/useGetScrollPosition";
 
 const LandingPage = () => {
   const currentScroll = useGetScrollPosition();
