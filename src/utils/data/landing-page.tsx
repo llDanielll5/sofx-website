@@ -43,6 +43,11 @@ export const allWorks = [
     img: "images/portfolio/karlabragasite.png",
   },
   {
+    href: "https://henriquefisioterapia.vercel.app/",
+    title: "Henrique Mota Fisioterapia | Landing Page",
+    img: "images/portfolio/fisioterapia.png",
+  },
+  {
     href: "https://atmosfest.com.br/",
     title: "Atmosfest Festas e Eventos | Website E-commerce",
     img: "images/portfolio/atmosfest.png",
