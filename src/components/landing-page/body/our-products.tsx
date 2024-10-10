@@ -7,12 +7,12 @@ const products = [
   {
     name: "WhatsBot Premium",
     logo: "/images/whatsbot/premium-full.png",
-    url: "https://sofx.com.br/services/whatsapp-bot",
+    url: "/services/whatsbot-premium",
   },
   {
     name: "WhatsBot Gold",
     logo: "/images/whatsbot/gold-full.png",
-    url: "https://sofx.com.br/services/whatsbot",
+    url: "/services/whatsbot-gold",
   },
 ];
 

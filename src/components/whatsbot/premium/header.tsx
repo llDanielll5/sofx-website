@@ -5,18 +5,26 @@ import { Box, styled, Typography } from "@mui/material";
 import { StyledButtonWhatsBotPremium } from "./banner";
 import { whatsappPhone } from "../../../constants/phone";
 import { COLORS } from "../../../constants/cssVariables";
+import { useRouter } from "next/router";
 
 const HeaderWhatsBotPremium = () => {
+  const router = useRouter();
   const { width } = useWindowSize();
   const msg = `Gostaria de realizar um orçamento para adquirir o Robô Whatsapp para minha empresa/negócio!`;
   const zapHref = `https://api.whatsapp.com/send?phone=${whatsappPhone}&text=${encodeURIComponent(
     msg
   )}`;
 
-  const openWhatsapp = () => window.open(zapHref, "_blank");
+  const openWhatsapp = () =>
+    window.open(zapHref, "_blank", "noopener,noreferrer");
   return (
     <HeaderSection>
-      {width! > 900 && <LogoImg src="/images/white-logo.png" />}
+      {width! > 900 && (
+        <LogoImg
+          src="/images/white-logo.png"
+          onClick={() => router.push("/")}
+        />
+      )}
       <Typography
         variant="h4"
         color={COLORS.primary}
@@ -59,6 +67,10 @@ const LogoImg = styled("img")`
   width: 100%;
   max-width: 200px;
   min-width: 120px;
+  cursor: pointer;
+  :hover {
+    opacity: 0.9;
+  }
 `;
 
 export default HeaderWhatsBotPremium;

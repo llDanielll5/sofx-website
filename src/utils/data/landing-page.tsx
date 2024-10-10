@@ -12,6 +12,7 @@ export const headerMenu = [
   { href: "/#services", title: "Nossos Serviços" },
   { href: "/#works", title: "Trabalhos" },
   { href: "/#contact", title: "Contato" },
+  { href: "services/whatsbot-premium", title: "Whatsbot" },
 ];
 
 export const cardAboutUs = [

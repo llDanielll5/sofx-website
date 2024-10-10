@@ -1,17 +1,17 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import { Box, Button, Card, Rating, Typography, styled } from "@mui/material";
-import { COLORS } from "../../constants/cssVariables";
-import { whatsappPhone } from "../../constants/phone";
-import { advantagesMock } from "../../_mock/whatsapp";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import useWindowSize from "../../hooks/useWindowSize";
-import Carousel, { ResponsiveType } from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
 import BannerWhatsPremium, {
   StyledButtonWhatsBotPremium,
 } from "../../components/whatsbot/premium/banner";
+import Carousel, { ResponsiveType } from "react-multi-carousel";
+import { whatsappPhone } from "../../constants/phone";
+import { advantagesMock } from "../../_mock/whatsapp";
+import { COLORS } from "../../constants/cssVariables";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import useWindowSize from "../../hooks/useWindowSize";
 import HeaderWhatsBotPremium from "../../components/whatsbot/premium/header";
+import "react-multi-carousel/lib/styles.css";
 
 const ratings = [
   {
@@ -164,6 +164,13 @@ const WhatsappBotPage = () => {
       </LastCallSection>
 
       <FooterSection>
+        <StyledButtonWhatsBotPremium
+          variant="contained"
+          href="/whatsbot/premium"
+          color="info"
+        >
+          Já sou membro Whatsbot Premium
+        </StyledButtonWhatsBotPremium>
         <LogoImg
           src="/images/logo-transparent.png"
           onClick={() =>
