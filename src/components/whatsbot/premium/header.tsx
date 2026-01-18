@@ -12,7 +12,7 @@ const HeaderWhatsBotPremium = () => {
   const { width } = useWindowSize();
   const msg = `Gostaria de realizar um orçamento para adquirir o Robô Whatsapp para minha empresa/negócio!`;
   const zapHref = `https://api.whatsapp.com/send?phone=${whatsappPhone}&text=${encodeURIComponent(
-    msg
+    msg,
   )}`;
 
   const openWhatsapp = () =>
@@ -38,7 +38,7 @@ const HeaderWhatsBotPremium = () => {
         variant="contained"
         endIcon={<WhatsAppIcon sx={{ fontSize: "50px" }} />}
       >
-        Testar 7 dias Grátis
+        Adquirir Meu Robô!
       </StyledButtonWhatsBotPremium>
     </HeaderSection>
   );
