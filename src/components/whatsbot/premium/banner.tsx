@@ -41,10 +41,9 @@ const BannerWhatsPremium = () => {
         rowGap={"1rem"}
       >
         <CallText variant="h5" color="white" fontFamily={"Montserrat"}>
-          Aumente seu faturamento até 70% mais com nosso robozinho para
-          WhatsApp. <br />
-          Tenha o controle de sua empresa na palma de sua mão <br />
-          Não perca mais clientes por falta de atendimento!
+          Você não perde vendas por falta de cliente. Você perde por demorar
+          responder. Enquanto você demora 10 minutos, seu concorrente responde
+          em 10 segundos.
         </CallText>
 
         <Typography
@@ -65,7 +64,7 @@ const BannerWhatsPremium = () => {
         /> */}
 
         <StyledButtonWhatsBotPremium onClick={openWhatsapp}>
-          Adquirir o meu Robô!
+          Quero automatizar minha empresa!
         </StyledButtonWhatsBotPremium>
 
         <CallSection>

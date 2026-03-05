@@ -31,23 +31,10 @@ const ratings = [
 ];
 
 const responsive: ResponsiveType = {
-  superLargeDesktop: {
-    // the naming can be any, depends on you.
-    breakpoint: { max: 4000, min: 3000 },
-    items: 1,
-  },
-  desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 1,
-  },
-  tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 1,
-  },
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 1,
-  },
+  superLargeDesktop: { breakpoint: { max: 4000, min: 3000 }, items: 1 },
+  desktop: { breakpoint: { max: 3000, min: 1024 }, items: 1 },
+  tablet: { breakpoint: { max: 1024, min: 464 }, items: 1 },
+  mobile: { breakpoint: { max: 464, min: 0 }, items: 1 },
 };
 
 const renderCarousel = (width: number) => (
@@ -77,7 +64,7 @@ const WhatsappBotPage = () => {
   const { width } = useWindowSize();
   const msg = `Gostaria de realizar um orçamento para adquirir o Robô Whatsapp para minha empresa/negócio!`;
   const zapHref = `https://api.whatsapp.com/send?phone=${whatsappPhone}&text=${encodeURIComponent(
-    msg
+    msg,
   )}`;
 
   const openWhatsapp = () => window.open(zapHref, "_blank");
@@ -87,7 +74,7 @@ const WhatsappBotPage = () => {
       <HeaderWhatsBotPremium />
       <BannerWhatsPremium />
 
-      <StyledButtonWhatsBotPremium
+      {/* <StyledButtonWhatsBotPremium
         onClick={openWhatsapp}
         variant="contained"
         sx={{ borderRadius: 0 }}
@@ -95,7 +82,7 @@ const WhatsappBotPage = () => {
         endIcon={<WhatsAppIcon fontSize="large" />}
       >
         Adquirir Meu Robô!
-      </StyledButtonWhatsBotPremium>
+      </StyledButtonWhatsBotPremium> */}
 
       <TitleContainer>
         <Typography
@@ -127,7 +114,7 @@ const WhatsappBotPage = () => {
                 {v.description}
               </Typography>
             </CardAdvantages>
-          )
+          ),
         )}
       </AdvantagesSection>
 

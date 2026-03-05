@@ -25,20 +25,13 @@ const HeaderWhatsBotPremium = () => {
           onClick={() => router.push("/")}
         />
       )}
-      <Typography
-        variant="h4"
-        color={COLORS.primary}
-        className="text-effect-3"
-        textAlign={"center"}
-      >
-        Robô em Super Promoção!
-      </Typography>
+
       <StyledButtonWhatsBotPremium
         onClick={openWhatsapp}
         variant="contained"
         endIcon={<WhatsAppIcon sx={{ fontSize: "50px" }} />}
       >
-        Adquirir Meu Robô!
+        Quero automatizar minha empresa!
       </StyledButtonWhatsBotPremium>
     </HeaderSection>
   );
