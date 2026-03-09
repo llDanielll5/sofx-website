@@ -2,16 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
-import {
-  Mail,
-  Phone,
-  MapPin,
-  Send,
-  Linkedin,
-  Instagram,
-  Github,
-  MessageCircle,
-} from "lucide-react";
+import { Mail, Phone, MapPin, Send, Instagram } from "lucide-react";
 
 export function Contact() {
   const [isVisible, setIsVisible] = useState(false);
@@ -22,6 +13,8 @@ export function Contact() {
     message: "",
   });
   const sectionRef = useRef<HTMLElement>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [statusMessage, setStatusMessage] = useState("");
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -40,10 +33,40 @@ export function Contact() {
     return () => observer.disconnect();
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log(formData);
+    setIsSubmitting(true);
+    setStatusMessage("");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "Erro ao enviar mensagem.");
+      }
+
+      setStatusMessage("Mensagem enviada com sucesso!");
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+    } catch (error) {
+      const message =
+        error instanceof Error ? error.message : "Erro ao enviar mensagem.";
+      setStatusMessage(message);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
@@ -256,11 +279,17 @@ export function Contact() {
 
               <Button
                 type="submit"
-                className="cursor-pointer w-full bg-[#6366f1] text-[#ffffff] hover:bg-[#6366f1]/90 font-semibold py-6 neon-glow"
+                disabled={isSubmitting}
+                className="cursor-pointer w-full bg-[#6366f1] text-[#ffffff] hover:bg-[#6366f1]/90 font-semibold py-6 neon-glow disabled:opacity-50"
               >
-                Enviar Mensagem
+                {isSubmitting ? "Enviando..." : "Enviar Mensagem"}
                 <Send className="ml-2 w-5 h-5" />
               </Button>
+              {statusMessage && (
+                <p className="text-sm text-center text-[#a0a0b0]">
+                  {statusMessage}
+                </p>
+              )}
             </form>
           </div>
         </div>
