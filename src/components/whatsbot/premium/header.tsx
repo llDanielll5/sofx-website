@@ -4,11 +4,8 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { Box, styled, Typography } from "@mui/material";
 import { StyledButtonWhatsBotPremium } from "./banner";
 import { whatsappPhone } from "../../../constants/phone";
-import { COLORS } from "../../../constants/cssVariables";
-import { useRouter } from "next/router";
 
 const HeaderWhatsBotPremium = () => {
-  const router = useRouter();
   const { width } = useWindowSize();
   const msg = `Gostaria de realizar um orçamento para adquirir o Robô Whatsapp para minha empresa/negócio!`;
   const zapHref = `https://api.whatsapp.com/send?phone=${whatsappPhone}&text=${encodeURIComponent(
@@ -22,7 +19,7 @@ const HeaderWhatsBotPremium = () => {
       {width! > 900 && (
         <LogoImg
           src="/images/white-logo.png"
-          onClick={() => router.push("/")}
+          onClick={() => window.open(`/`)}
         />
       )}
 
@@ -41,7 +38,7 @@ const HeaderSection = styled(Box)`
   padding: 1.5rem;
   position: fixed;
   width: 100vw;
-  z-index: 10;
+  z-index: 999999;
   top: 0;
   left: 0;
   display: flex;

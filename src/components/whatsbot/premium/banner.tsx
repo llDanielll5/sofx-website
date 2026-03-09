@@ -40,7 +40,7 @@ const BannerWhatsPremium = () => {
         flexDirection="column"
         rowGap={"1rem"}
       >
-        <CallText variant="h5" color="white" fontFamily={"Montserrat"}>
+        <CallText variant="h5" color="white" fontFamily={"Poppins"}>
           Você não perde vendas por falta de cliente. Você perde por demorar
           responder. Enquanto você demora 10 minutos, seu concorrente responde
           em 10 segundos.
@@ -50,7 +50,7 @@ const BannerWhatsPremium = () => {
           variant="body1"
           color="white"
           fontWeight={"300"}
-          fontFamily={"Montserrat"}
+          fontFamily={"Poppins"}
         >
           Conheça o WhatsBot Premium e mude totalmente sua vida.
         </Typography>
@@ -68,7 +68,7 @@ const BannerWhatsPremium = () => {
         </StyledButtonWhatsBotPremium>
 
         <CallSection>
-          <CallText variant="h4" fontFamily={"Montserrat"} color="white">
+          <CallText variant="h4" fontFamily={"Poppins"} color="white">
             <span>
               Saiba como o WhatsBot Premium pode mudar seus atendimentos
             </span>
@@ -123,7 +123,7 @@ const VSL = styled("iframe")`
 `;
 
 export const StyledButtonWhatsBotPremium = styled(Button)`
-  font-family: "Montserrat";
+  font-family: "Poppins";
   text-transform: uppercase;
   border-radius: 3rem;
   padding: 1rem 2rem;

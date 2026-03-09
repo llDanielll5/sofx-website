@@ -1,12 +1,12 @@
 import React from "react";
 import { Box, styled } from "@mui/material";
-import BannerWhatsBot from "../../components/whatsbot/gold/banner";
-import AdvantagesWhatsBot from "../../components/whatsbot/gold/advantages";
-import JournalsWhatsBot from "../../components/whatsbot/gold/journals";
-import ReceivesWhatsBot from "../../components/whatsbot/gold/receives";
-import FooterWhatsBot from "../../components/whatsbot/gold/footer";
-import RatingsWhatsBot from "../../components/whatsbot/gold/ratings";
 import Head from "next/head";
+import BannerWhatsBot from "@/src/components/whatsbot/gold/banner";
+import AdvantagesWhatsBot from "@/src/components/whatsbot/gold/advantages";
+import JournalsWhatsBot from "@/src/components/whatsbot/gold/journals";
+import ReceivesWhatsBot from "@/src/components/whatsbot/gold/receives";
+import RatingsWhatsBot from "@/src/components/whatsbot/gold/ratings";
+import FooterWhatsBot from "@/src/components/whatsbot/gold/footer";
 
 const WhatsBot = () => {
   return (

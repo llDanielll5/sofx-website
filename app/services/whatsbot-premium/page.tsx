@@ -1,16 +1,16 @@
-/* eslint-disable @next/next/no-img-element */
-import React from "react";
+"use client";
+
 import { Box, Button, Card, Rating, Typography, styled } from "@mui/material";
+import Carousel, { ResponsiveType } from "react-multi-carousel";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import useWindowSize from "@/src/hooks/useWindowSize";
+import HeaderWhatsBotPremium from "@/src/components/whatsbot/premium/header";
 import BannerWhatsPremium, {
   StyledButtonWhatsBotPremium,
-} from "../../components/whatsbot/premium/banner";
-import Carousel, { ResponsiveType } from "react-multi-carousel";
-import { whatsappPhone } from "../../constants/phone";
-import { advantagesMock } from "../../_mock/whatsapp";
-import { COLORS } from "../../constants/cssVariables";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import useWindowSize from "../../hooks/useWindowSize";
-import HeaderWhatsBotPremium from "../../components/whatsbot/premium/header";
+} from "@/src/components/whatsbot/premium/banner";
+import { whatsappPhone } from "@/src/constants/phone";
+import { advantagesMock } from "@/src/_mock/whatsapp";
+import { COLORS } from "@/src/constants/cssVariables";
 import "react-multi-carousel/lib/styles.css";
 
 const ratings = [
@@ -53,8 +53,12 @@ const renderCarousel = (width: number) => (
           <RatingAvatar src={v.avatar} />
           <Rating name="read-only" value={v.stars} readOnly />
         </RatingHeader>
-        <Typography variant="subtitle1">{v.name}</Typography>
-        <Typography variant="caption">{v.comment}</Typography>
+        <Typography variant="subtitle1" color="black" fontWeight={900}>
+          {v.name}
+        </Typography>
+        <Typography variant="caption" color="black" fontWeight={500}>
+          {v.comment}
+        </Typography>
       </RatingCard>
     ))}
   </Carousel>
@@ -74,16 +78,6 @@ const WhatsappBotPage = () => {
       <HeaderWhatsBotPremium />
       <BannerWhatsPremium />
 
-      {/* <StyledButtonWhatsBotPremium
-        onClick={openWhatsapp}
-        variant="contained"
-        sx={{ borderRadius: 0 }}
-        fullWidth
-        endIcon={<WhatsAppIcon fontSize="large" />}
-      >
-        Adquirir Meu Robô!
-      </StyledButtonWhatsBotPremium> */}
-
       <TitleContainer>
         <Typography
           variant="h3"
@@ -102,14 +96,14 @@ const WhatsappBotPage = () => {
               <Typography
                 variant="h6"
                 textAlign="center"
-                fontFamily={"Montserrat"}
+                fontFamily={"Poppins"}
               >
                 + {v.title}
               </Typography>
               <Typography
                 variant="subtitle2"
                 textAlign="center"
-                fontFamily={"Montserrat"}
+                fontFamily={"Poppins"}
               >
                 {v.description}
               </Typography>
@@ -151,13 +145,6 @@ const WhatsappBotPage = () => {
       </LastCallSection>
 
       <FooterSection>
-        <StyledButtonWhatsBotPremium
-          variant="contained"
-          href="/whatsbot/premium"
-          color="info"
-        >
-          Já sou membro Whatsbot Premium
-        </StyledButtonWhatsBotPremium>
         <LogoImg
           src="/images/logo-transparent.png"
           onClick={() =>
