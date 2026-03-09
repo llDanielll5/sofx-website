@@ -1,0 +1,252 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Neon Dark Theme for SOFX */
+  --background: #050508;
+  --foreground: #f0f0f5;
+  --card: #0a0a12;
+  --card-foreground: #f0f0f5;
+  --popover: #0a0a12;
+  --popover-foreground: #f0f0f5;
+  --primary: #00d4ff;
+  --primary-foreground: #050508;
+  --secondary: #6366f1;
+  --secondary-foreground: #f0f0f5;
+  --muted: #12121a;
+  --muted-foreground: #a0a0b0;
+  --accent: #00ff88;
+  --accent-foreground: #050508;
+  --destructive: #ff4444;
+  --destructive-foreground: #f0f0f5;
+  --border: #1a1a2e;
+  --input: #12121a;
+  --ring: #00d4ff;
+  --chart-1: #00d4ff;
+  --chart-2: #6366f1;
+  --chart-3: #00ff88;
+  --chart-4: #ff6b6b;
+  --chart-5: #ffd93d;
+  --radius: 0.75rem;
+
+  /* Neon glow colors */
+  --neon-cyan: #00d4ff;
+  --neon-purple: #6366f1;
+  --neon-green: #00ff88;
+  --neon-pink: #ff6b9d;
+  --neon-yellow: #ffd93d;
+
+  /* Gradients */
+  --gradient-neon: linear-gradient(
+    135deg,
+    #00d4ff 0%,
+    #6366f1 50%,
+    #00ff88 100%
+  );
+  --gradient-dark: linear-gradient(180deg, #050508 0%, #0a0a12 100%);
+}
+
+@theme inline {
+  --font-sans: "Poppins", "Geist Fallback";
+  --font-mono: "Poppins", "Geist Mono Fallback";
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Neon glow effects */
+.neon-text {
+  text-shadow:
+    0 0 10px var(--neon-cyan),
+    0 0 20px var(--neon-cyan),
+    0 0 40px var(--neon-cyan);
+}
+
+.neon-text-purple {
+  text-shadow:
+    0 0 10px var(--neon-purple),
+    0 0 20px var(--neon-purple),
+    0 0 40px var(--neon-purple);
+}
+
+.neon-text-green {
+  text-shadow:
+    0 0 10px var(--neon-green),
+    0 0 20px var(--neon-green),
+    0 0 40px var(--neon-green);
+}
+
+.neon-border {
+  box-shadow:
+    0 0 5px var(--neon-cyan),
+    0 0 10px var(--neon-cyan),
+    inset 0 0 5px rgba(0, 212, 255, 0.1);
+}
+
+.neon-border-purple {
+  box-shadow:
+    0 0 5px var(--neon-purple),
+    0 0 10px var(--neon-purple),
+    inset 0 0 5px rgba(99, 102, 241, 0.1);
+}
+
+.neon-glow {
+  box-shadow:
+    0 0 20px rgba(0, 212, 255, 0.3),
+    0 0 40px rgba(0, 212, 255, 0.2),
+    0 0 60px rgba(0, 212, 255, 0.1);
+}
+
+.gradient-border {
+  position: relative;
+  background: var(--card);
+  border-radius: var(--radius);
+}
+
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: inherit;
+  background: linear-gradient(
+    135deg,
+    var(--neon-cyan),
+    var(--neon-purple),
+    var(--neon-green)
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.glass {
+  background: rgba(10, 10, 18, 0.8);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-pulse-neon {
+  animation: pulse-neon 2s ease-in-out infinite;
+}
+
+@keyframes pulse-neon {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 8s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Grid pattern */
+.grid-pattern {
+  background-image:
+    linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--neon-cyan);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--neon-purple);
+}

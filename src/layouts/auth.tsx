@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import PropTypes from "prop-types";
 import NextLink from "next/link";
-import { Box, Typography, Unstable_Grid2 as Grid } from "@mui/material";
+import { Box, Typography, Grid } from "@mui/material";
 
 const welcomeStyle = {
   fontSize: "24px",
@@ -51,7 +51,7 @@ export const AuthLayout = (props: any) => {
   return (
     <Box component="main" sx={{ display: "flex", flex: "1 1 auto" }}>
       <Grid container sx={{ flex: "1 1 auto" }}>
-        <Grid xs={12} lg={8} sx={headerGrid}>
+        <Grid size={{ xs: 12, lg: 8 }} sx={headerGrid}>
           <Box component="header" sx={headerStyle}>
             {/* <Box component={NextLink} href="/" sx={logoStyle}>
               <img src="/images/whatsbot-premium-logo.png" alt="" />
@@ -60,7 +60,7 @@ export const AuthLayout = (props: any) => {
           </Box>
           {children}
         </Grid>
-        <Grid xs={12} lg={4} sx={gradient}>
+        <Grid size={{ xs: 12, lg: 4 }} sx={gradient}>
           <Box sx={{ p: 3 }}>
             <img alt="" src="/images/whatsbot/premium/logo.png" />
           </Box>
