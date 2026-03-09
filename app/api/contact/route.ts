@@ -35,8 +35,7 @@ export async function POST(request: Request) {
     }
 
     const to = process.env.CONTACT_TO_EMAIL;
-    const from =
-      process.env.CONTACT_FROM_EMAIL || "Sofx Site <onboarding@resend.dev>";
+    const from = "Sofx Site <contato@sofx.com.br>";
 
     if (!to) {
       return NextResponse.json(
