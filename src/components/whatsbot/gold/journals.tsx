@@ -1,5 +1,5 @@
+"use client";
 import { Box, Card, Typography, styled } from "@mui/material";
-import React from "react";
 
 interface JournalsInterface {
   img: string;

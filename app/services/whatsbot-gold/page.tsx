@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+
 import { Box, styled } from "@mui/material";
 import Head from "next/head";
 import BannerWhatsBot from "@/src/components/whatsbot/gold/banner";

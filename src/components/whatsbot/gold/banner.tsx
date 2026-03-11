@@ -1,5 +1,5 @@
-/* eslint-disable @next/next/no-img-element */
-import React from "react";
+"use client";
+
 import {
   Box,
   Button,
@@ -15,7 +15,7 @@ const BannerWhatsBot = () => {
   const { width } = useWindowSize();
   const msg = `Gostaria de saber mais sobre o WhatsBot Gold e como posso faturar com ele.`;
   const zapHref = `https://api.whatsapp.com/send?phone=${whatsappPhone}&text=${encodeURIComponent(
-    msg
+    msg,
   )}`;
 
   const openWhatsapp = () => window.open(zapHref, "_blank");

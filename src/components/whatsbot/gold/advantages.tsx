@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+
 import { Box, Card, Divider, Typography, styled } from "@mui/material";
 import SupportAgentIcon from "@mui/icons-material/SupportAgent";
 import AllInclusiveIcon from "@mui/icons-material/AllInclusive";
@@ -99,7 +100,7 @@ const AdvantagesWhatsBot = () => {
       </Typography>
       <AdvantagesContainer>
         {advantages.map((v: AdvantagesInterface, i: number) =>
-          advantageCard({ v, i })
+          advantageCard({ v, i }),
         )}
       </AdvantagesContainer>
 
@@ -107,7 +108,7 @@ const AdvantagesWhatsBot = () => {
 
       <MiniCardsContainer>
         {minicards.map((v: MiniCardsInterface, i: number) =>
-          miniCard({ v, i })
+          miniCard({ v, i }),
         )}
       </MiniCardsContainer>
     </Container>

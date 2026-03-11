@@ -1,11 +1,12 @@
-import React from "react";
+"use client";
+
 import { Box, Button, Card, Divider, Typography, styled } from "@mui/material";
 import { whatsappPhone } from "../../../constants/phone";
 
 const ReceivesWhatsBot = () => {
   const msg = `Gostaria de saber mais sobre o WhatsBot Gold e como posso faturar com ele.`;
   const zapHref = `https://api.whatsapp.com/send?phone=${whatsappPhone}&text=${encodeURIComponent(
-    msg
+    msg,
   )}`;
 
   const openWhatsapp = () => window.open(zapHref, "_blank");
