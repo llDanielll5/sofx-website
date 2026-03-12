@@ -11,6 +11,7 @@ const navLinks = [
   { href: "#projetos", label: "Projetos" },
   { href: "#tecnologias", label: "Tecnologias" },
   { href: "#contato", label: "Contato" },
+  { href: "/whatsbot/premium", label: "Whatsbot" },
 ];
 
 export function Navbar() {

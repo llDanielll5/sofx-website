@@ -31,8 +31,8 @@ const footerLinks = {
       icon: Mail,
     },
     {
-      label: "+55 (61) 93505-4657",
-      href: "https://wa.me/5561935054657",
+      label: "+55 (61) 93505-4682",
+      href: "https://wa.me/5561935054682",
       icon: MessageCircle,
     },
   ],

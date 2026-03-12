@@ -11,6 +11,7 @@ const navLinks = [
   { label: "Vantagens", href: "#vantagens" },
   { label: "Planos", href: "#planos" },
   { label: "Depoimentos", href: "#depoimentos" },
+  { label: "SOFX", href: "/" },
 ];
 
 export function Header() {

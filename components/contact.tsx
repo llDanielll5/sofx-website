@@ -142,12 +142,12 @@ export function Contact() {
                 <div>
                   <h4 className="text-[#f0f0f5] font-medium mb-1">Telefone</h4>
                   <a
-                    href="https://wa.me/5561935054657"
+                    href="https://wa.me/4682"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-[#a0a0b0] hover:text-[#6366f1] transition-colors"
                   >
-                    +55 (61) 93505-4657
+                    +55 (61) 93505-4682
                   </a>
                 </div>
               </div>
