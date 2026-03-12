@@ -31,6 +31,12 @@ export const metadata: Metadata = {
     "automação",
     "inteligência artificial",
     "sistemas sob demanda",
+    "sistemas",
+    "tecnologia",
+    "site",
+    "ia",
+    "software",
+    "aplicativo",
   ],
   authors: [{ name: "SOFX" }],
   generator: "Next.js",
@@ -41,12 +47,7 @@ export const metadata: Metadata = {
     locale: "pt_BR",
   },
   icons: {
-    icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
-      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
-    ],
-    apple: "/apple-icon.png",
+    icon: [{ url: "/favicon.ico", sizes: "any" }],
   },
 };
 
