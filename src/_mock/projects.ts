@@ -1,6 +1,20 @@
 export const ALL_PROJECTS = [
   {
-    id: 1,
+    id: 2,
+    title: "Kardapiu",
+    description:
+      "Sistema Web Completo (SaaS) para gerenciamento de restaurantes e delivery.",
+    url: "https://www.kardapiu.com.br",
+    tags: ["SaaS", "Web App", "Dashboard", "Delivery"],
+    color: "#662511",
+    images: [
+      "/images/projects/kardapiu/1.png",
+      "/images/projects/kardapiu/2.png",
+      "/images/projects/kardapiu/3.png",
+    ],
+  },
+  {
+    id: 2,
     title: "Microjobs",
     description:
       "Sistema Web Completo (SaaS) para gerenciamento de micro tarefas e freelancers.",
@@ -14,7 +28,7 @@ export const ALL_PROJECTS = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     title: "Rota Fidelidade",
     description:
       "Sistema Web Completo para programa de fidelidade e recompensas.",
@@ -28,7 +42,7 @@ export const ALL_PROJECTS = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     title: "AmazonCards",
     description:
       "Sistema Web e Mobile Completo para gestão de cartões e pagamentos.",
@@ -42,7 +56,7 @@ export const ALL_PROJECTS = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     title: "CEMIC",
     description:
       "Sistema Web e Automação WhatsApp para ONG com gestão completa.",
@@ -56,7 +70,7 @@ export const ALL_PROJECTS = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     title: "Igrejah",
     description: "Sistema Web Completo para gestão de igrejas e comunidades.",
     url: "https://igrejah.vercel.app",
@@ -69,7 +83,7 @@ export const ALL_PROJECTS = [
     ],
   },
   {
-    id: 6,
+    id: 7,
     title: "Karla Braga Nutricionista",
     description: "Website Landing Page profissional para nutricionista.",
     url: "https://www.karlabraganutri.com.br",
@@ -82,7 +96,7 @@ export const ALL_PROJECTS = [
     ],
   },
   {
-    id: 7,
+    id: 8,
     title: "Hygienize",
     description: "Website Landing Page para empresa de higienização.",
     url: "https://www.hygienize.com.br",
